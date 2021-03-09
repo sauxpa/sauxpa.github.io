@@ -3,128 +3,127 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://sauxpa.github.io/talk/example-talk/</loc>
-    <lastmod>2020-12-28T23:35:36+00:00</lastmod>
+    <loc>/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sauxpa.github.io/</loc>
-    <lastmod>2021-01-23T19:43:06+00:00</lastmod>
+    <loc>/talk/example-talk/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sauxpa.github.io/tag/academic/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/categories/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/category/demo/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/tags/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/post/getting-started/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
+    <loc>/event/</loc>
+    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc></loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sauxpa.github.io/tag/%E5%BC%80%E6%BA%90/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
+    <loc>/tag/academic/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sauxpa.github.io/category/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
+    <loc>/categories/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sauxpa.github.io/slides/</loc>
-    <lastmod>2020-12-11T01:40:31+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/slides/example/</loc>
-    <lastmod>2020-12-11T01:40:31+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/tag/deep-learning/</loc>
-    <lastmod>2020-12-11T01:40:31+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/example/</loc>
-    <lastmod>2020-12-11T01:40:31+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/</loc>
-    <lastmod>2020-12-11T01:40:31+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/publication-type/1/</loc>
-    <lastmod>2020-12-11T02:48:57+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/publication/example/</loc>
-    <lastmod>2020-12-11T02:48:57+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/publication_types/</loc>
-    <lastmod>2020-12-11T02:48:57+00:00</lastmod>
+    <loc>/category/demo/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc></loc>
-    <lastmod>2020-12-11T02:48:57+00:00</lastmod>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sauxpa.github.io/admin/</loc>
-    <lastmod>2021-02-09T22:16:30+00:00</lastmod>
+    <loc>/post/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/getting-started/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc></loc>
-    <lastmod>2021-01-23T19:43:06+00:00</lastmod>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/%E5%BC%80%E6%BA%90/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/category/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2020-12-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slides/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/slides/example/</loc>
+    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tag/deep-learning/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/example/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/project/</loc>
+    <lastmod>2016-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication-type/1/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/example/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/</loc>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc></loc>
-    <lastmod>2020-12-11T01:15:31+00:00</lastmod>
+    <lastmod>2013-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://sauxpa.github.io/post/</loc>
-    <lastmod>2021-01-23T19:43:06+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/publication/</loc>
-    <lastmod>2021-01-23T19:43:06+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/event/</loc>
-    <lastmod>2021-01-23T19:43:06+00:00</lastmod>
+    <loc>/admin/</loc>
   </url>
   
 </urlset>
