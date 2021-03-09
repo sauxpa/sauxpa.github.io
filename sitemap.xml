@@ -9,7 +9,7 @@
   
   <url>
     <loc>https://sauxpa.github.io/</loc>
-    <lastmod>2021-03-09T19:29:18+01:00</lastmod>
+    <lastmod>2021-01-23T19:43:06+00:00</lastmod>
   </url>
   
   <url>
@@ -53,77 +53,27 @@
   </url>
   
   <url>
-    <loc></loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/stochastic/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/ito-diffusions/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/bond_pricer/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/expander_graphs/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/random_matrices/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/markov-epidemic/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/neural_exploration/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/graph_embedding/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/optimal_transport_correlation/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/connectivity-loss/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/project/fractal/</loc>
-    <lastmod>2021-03-09T19:21:55+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://sauxpa.github.io/slides/</loc>
     <lastmod>2020-12-11T01:40:31+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://sauxpa.github.io/slides/example/</loc>
+    <lastmod>2020-12-11T01:40:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sauxpa.github.io/tag/deep-learning/</loc>
+    <lastmod>2020-12-11T01:40:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sauxpa.github.io/project/example/</loc>
+    <lastmod>2020-12-11T01:40:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sauxpa.github.io/project/</loc>
     <lastmod>2020-12-11T01:40:31+00:00</lastmod>
   </url>
   
@@ -158,13 +108,8 @@
   </url>
   
   <url>
-    <loc>https://sauxpa.github.io/home/</loc>
-    <lastmod>2021-03-09T19:56:46+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc></loc>
-    <lastmod>2021-03-09T19:29:18+01:00</lastmod>
+    <lastmod>2020-12-11T01:15:31+00:00</lastmod>
   </url>
   
   <url>

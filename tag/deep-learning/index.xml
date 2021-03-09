@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects | Patrick Saux</title>
-    <link>https://sauxpa.github.io/project/</link>
-      <atom:link href="https://sauxpa.github.io/project/index.xml" rel="self" type="application/rss+xml" />
-    <description>Projects</description>
+    <title>Deep Learning | Patrick Saux</title>
+    <link>https://sauxpa.github.io/tag/deep-learning/</link>
+      <atom:link href="https://sauxpa.github.io/tag/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Deep Learning</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://sauxpa.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>Projects</title>
-      <link>https://sauxpa.github.io/project/</link>
+      <title>Deep Learning</title>
+      <link>https://sauxpa.github.io/tag/deep-learning/</link>
     </image>
     
     <item>
