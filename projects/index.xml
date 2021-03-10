@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Patrick Saux</title>
+    <link>https://sauxpa.github.io/projects/</link>
+      <atom:link href="https://sauxpa.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><lastBuildDate>Mon, 09 Nov 2020 14:47:06 +0100</lastBuildDate>
+    <image>
+      <url>https://sauxpa.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Projects</title>
+      <link>https://sauxpa.github.io/projects/</link>
+    </image>
+    
+    <item>
+      <title>Stochastic</title>
+      <link>https://sauxpa.github.io/projects/stochastic/</link>
+      <pubDate>Mon, 09 Nov 2020 14:47:06 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/stochastic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ito-diffusions</title>
+      <link>https://sauxpa.github.io/projects/ito-diffusions/</link>
+      <pubDate>Mon, 09 Nov 2020 14:10:26 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/ito-diffusions/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bond pricer</title>
+      <link>https://sauxpa.github.io/projects/bond_pricer/</link>
+      <pubDate>Mon, 01 Jun 2020 15:12:47 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/bond_pricer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Expander graphs</title>
+      <link>https://sauxpa.github.io/projects/expander_graphs/</link>
+      <pubDate>Sat, 02 May 2020 15:15:07 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/expander_graphs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Random matrices</title>
+      <link>https://sauxpa.github.io/projects/random_matrices/</link>
+      <pubDate>Tue, 28 Apr 2020 15:17:41 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/random_matrices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Markov Epidemic</title>
+      <link>https://sauxpa.github.io/projects/markov-epidemic/</link>
+      <pubDate>Sat, 25 Apr 2020 14:37:44 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/markov-epidemic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Neural exploration</title>
+      <link>https://sauxpa.github.io/projects/neural_exploration/</link>
+      <pubDate>Sat, 18 Jan 2020 15:07:41 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/neural_exploration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Continuity of Graph Embeddings</title>
+      <link>https://sauxpa.github.io/projects/graph_embedding/</link>
+      <pubDate>Wed, 01 Jan 2020 15:00:03 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/graph_embedding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Optimal Transport Correlation</title>
+      <link>https://sauxpa.github.io/projects/optimal_transport_correlation/</link>
+      <pubDate>Wed, 25 Dec 2019 14:58:15 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/optimal_transport_correlation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Connectivity Loss</title>
+      <link>https://sauxpa.github.io/projects/connectivity-loss/</link>
+      <pubDate>Sun, 15 Dec 2019 14:50:16 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/connectivity-loss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Fractal</title>
+      <link>https://sauxpa.github.io/projects/fractal/</link>
+      <pubDate>Sun, 14 Jul 2019 15:19:57 +0100</pubDate>
+      <guid>https://sauxpa.github.io/projects/fractal/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
