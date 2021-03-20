@@ -13,15 +13,12 @@
       <guid>https://sauxpa.github.io/slides/rl_centrale/bandits/</guid>
       <description>&lt;h1 id=&#34;introduction-to-stochastic-and-structured-bandits&#34;&gt;Introduction to stochastic and structured bandits&lt;/h1&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;multi-armed-bandits-as-mdp&#34;&gt;Multi-armed bandits as MDP&lt;/h2&gt;
+&lt;h2 id=&#34;multi-armed-bandits&#34;&gt;Multi-armed bandits&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Single state $\mathcal{S}={s}$;&lt;/li&gt;
-&lt;li&gt;$K$ actions;&lt;/li&gt;
-&lt;li&gt;Reward for action $k\in{1, \dots, K} is $r(k)\sim\nu_k$;
-&lt;ul&gt;
-&lt;li&gt;Expected reward $\mathbb{E}[r(k)] = \mu_k$.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
+&lt;li&gt;$K$ probability measures (&lt;strong&gt;arms&lt;/strong&gt;) $\nu_1, \dots, \nu_K$ with mean $\mu_1, \dots, \mu_K$.&lt;/li&gt;
+&lt;li&gt;Policy $\pi_t\in{1, \dots, K}$ for $t=1, \dots, T$.&lt;/li&gt;
+&lt;li&gt;If $\pi_t=k$ ($$pulling arm k$$), receive reward $X_{k, t}\sim \nu_k$&lt;/li&gt;
+&lt;li&gt;Goal: minimise regret to optimal arm in expectation&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;

@@ -64,15 +64,12 @@
     <section>
     
       
-<h2 id="multi-armed-bandits-as-mdp">Multi-armed bandits as MDP</h2>
+<h2 id="multi-armed-bandits">Multi-armed bandits</h2>
 <ul>
-<li>Single state $\mathcal{S}={s}$;</li>
-<li>$K$ actions;</li>
-<li>Reward for action $k\in{1, \dots, K} is $r(k)\sim\nu_k$;
-<ul>
-<li>Expected reward $\mathbb{E}[r(k)] = \mu_k$.</li>
-</ul>
-</li>
+<li>$K$ probability measures (<strong>arms</strong>) $\nu_1, \dots, \nu_K$ with mean $\mu_1, \dots, \mu_K$.</li>
+<li>Policy $\pi_t\in{1, \dots, K}$ for $t=1, \dots, T$.</li>
+<li>If $\pi_t=k$ ($$pulling arm k$$), receive reward $X_{k, t}\sim \nu_k$</li>
+<li>Goal: minimise regret to optimal arm in expectation</li>
 </ul>
 
     </section>
