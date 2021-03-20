@@ -11,14 +11,17 @@
       <link>https://sauxpa.github.io/slides/rl_centrale/bandits/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sauxpa.github.io/slides/rl_centrale/bandits/</guid>
-      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-wowchemy&#34;&gt;Create slides in Markdown with Wowchemy&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;introduction-to-stochastic-and-structured-bandits&#34;&gt;Introduction to stochastic and structured bandits&lt;/h1&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;h2 id=&#34;multi-armed-bandits-as-mdp&#34;&gt;Multi-armed bandits as MDP&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
-&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
-&lt;li&gt;Supports speaker notes&lt;/li&gt;
-&lt;li&gt;Mobile friendly slides&lt;/li&gt;
+&lt;li&gt;Single state $\mathcal{S}={s}$;&lt;/li&gt;
+&lt;li&gt;$K$ actions;&lt;/li&gt;
+&lt;li&gt;Reward for action $k\in{1, \dots, K} is $r(k)\sim\nu_k$;
+&lt;ul&gt;
+&lt;li&gt;Expected reward $\mathbb{E}[r(k)] = \mu_k$.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
