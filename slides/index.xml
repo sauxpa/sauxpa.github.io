@@ -5,7 +5,7 @@
     <link>https://sauxpa.github.io/slides/</link>
       <atom:link href="https://sauxpa.github.io/slides/index.xml" rel="self" type="application/rss+xml" />
     <description>Slides</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 20 Mar 2021 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Bandits</title>
       <link>https://sauxpa.github.io/slides/rl_centrale/bandits/</link>
