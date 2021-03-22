@@ -13,21 +13,21 @@
     </image>
     
     <item>
-      <title>Bandits</title>
-      <link>https://sauxpa.github.io/teaching/rl_centrale/02_bandits/</link>
-      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
-      <guid>https://sauxpa.github.io/teaching/rl_centrale/02_bandits/</guid>
-      <description>&lt;p&gt;Introduction to stochastic and structured bandits.&lt;/p&gt;
-&lt;!-- [Bandits Blitz Course](/slides/rl_centrale/bandits) --&gt;</description>
-    </item>
-    
-    <item>
-      <title>MDP</title>
+      <title>1. MDP</title>
       <link>https://sauxpa.github.io/teaching/rl_centrale/01_mdp/</link>
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sauxpa.github.io/teaching/rl_centrale/01_mdp/</guid>
       <description>&lt;p&gt;Introduction to Markov Decision Processes, Bellman operators and control.&lt;/p&gt;
 &lt;!-- [MDP Blitz Course](/slides/rl_centrale/mdp) --&gt;</description>
+    </item>
+    
+    <item>
+      <title>2. Bandits</title>
+      <link>https://sauxpa.github.io/teaching/rl_centrale/02_bandits/</link>
+      <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://sauxpa.github.io/teaching/rl_centrale/02_bandits/</guid>
+      <description>&lt;p&gt;Introduction to stochastic and structured bandits.&lt;/p&gt;
+&lt;!-- [Bandits Blitz Course](/slides/rl_centrale/bandits) --&gt;</description>
     </item>
     
   </channel>
