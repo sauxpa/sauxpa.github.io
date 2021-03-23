@@ -18,9 +18,9 @@
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sauxpa.github.io/teaching/rl_centrale/01_mdp/</guid>
       <description>&lt;p&gt;Introduction to Markov Decision Processes, Bellman operators and control.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;mdp_cheatsheet.pdf&#34;&gt;MDP Blitz Course&lt;/a&gt;
-&lt;a href=&#34;td1.zip&#34;&gt;Practical session&lt;/a&gt;
-&lt;a href=&#34;td1_centrale_correction.pdf&#34;&gt;Solution&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;mdp_cheatsheet.pdf&#34;&gt;MDP Blitz Course&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;td1.zip&#34;&gt;Practical session&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;td1_centrale_correction.pdf&#34;&gt;Solution&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -29,8 +29,8 @@
       <pubDate>Sat, 20 Mar 2021 00:00:00 +0000</pubDate>
       <guid>https://sauxpa.github.io/teaching/rl_centrale/02_bandits/</guid>
       <description>&lt;p&gt;Introduction to stochastic and structured bandits.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;bandit_cheatsheet.pdf&#34;&gt;Bandits Blitz Course&lt;/a&gt;
-&lt;a href=&#34;td2.zip&#34;&gt;Practical session&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;bandit_cheatsheet.pdf&#34;&gt;Bandits Blitz Course&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;td2.zip&#34;&gt;Practical session&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
