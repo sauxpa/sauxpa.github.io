@@ -30,7 +30,18 @@
       <guid>https://sauxpa.github.io/teaching/rl_centrale/02_bandits/</guid>
       <description>&lt;p&gt;Introduction to stochastic and structured bandits.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;bandit_cheatsheet.pdf&#34;&gt;Bandits Blitz Course&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;td2.zip&#34;&gt;Practical session&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;a href=&#34;td2.zip&#34;&gt;Practical session&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;forban.zip&#34;&gt;Forban (bandit library)&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>3. Planning</title>
+      <link>https://sauxpa.github.io/teaching/rl_centrale/03_planning/</link>
+      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://sauxpa.github.io/teaching/rl_centrale/03_planning/</guid>
+      <description>&lt;p&gt;Planning in bandits: pure exploration, best arm identification.
+Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;tictactoe.zip&#34;&gt;Practical session - MCTS on TicTacToe&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
