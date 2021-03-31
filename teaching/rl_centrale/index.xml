@@ -41,6 +41,8 @@
       <guid>https://sauxpa.github.io/teaching/rl_centrale/03_planning/</guid>
       <description>&lt;p&gt;Planning in bandits: pure exploration, best arm identification.
 Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;bai.zip&#34;&gt;Practical session - Best arm identification&lt;/a&gt;
+&lt;a href=&#34;../02_bandits/forban.zip&#34;&gt;Forban (bandit library)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;tictactoe.zip&#34;&gt;Practical session - MCTS on TicTacToe&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
