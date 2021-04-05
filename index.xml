@@ -47,6 +47,16 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
     </item>
     
     <item>
+      <title>4. Deep Reinforcement Learning</title>
+      <link>https://sauxpa.github.io/teaching/rl_centrale/04_drl/</link>
+      <pubDate>Mon, 05 Apr 2021 00:00:00 +0000</pubDate>
+      <guid>https://sauxpa.github.io/teaching/rl_centrale/04_drl/</guid>
+      <description>&lt;p&gt;Deep RL, DQN.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;dqn_cheatsheet.pdf&#34;&gt;DQN Blitz Course&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;dqn.zip&#34;&gt;Practical session - DQN&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Example Talk</title>
       <link>https://sauxpa.github.io/talk/example-talk/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
