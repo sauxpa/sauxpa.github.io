@@ -1,0 +1,1319 @@
+<!DOCTYPE html><html lang="en-uk" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.0.0-beta.3 for Hugo" />
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Patrick Saux" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A humble lockdown project to model the interplay between the structure of a network and the spread of epidemics over it." />
+
+  
+  <link rel="alternate" hreflang="en-uk" href="https://sauxpa.github.io/post/markov_epidemic/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#795548" />
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.b9dd8462c32d515c203bc2e7c1f0812b.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_2.png" />
+
+  <link rel="canonical" href="https://sauxpa.github.io/post/markov_epidemic/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Patrick Saux" />
+  <meta property="og:url" content="https://sauxpa.github.io/post/markov_epidemic/" />
+  <meta property="og:title" content="Markov Epidemic, a stochastic model for disease outbreak | Patrick Saux" />
+  <meta property="og:description" content="A humble lockdown project to model the interplay between the structure of a network and the spread of epidemics over it." /><meta property="og:image" content="https://sauxpa.github.io/post/markov_epidemic/featured.png" />
+    <meta property="twitter:image" content="https://sauxpa.github.io/post/markov_epidemic/featured.png" /><meta property="og:locale" content="en-uk" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2020-04-24T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-04-12T12:56:07&#43;02:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sauxpa.github.io/post/markov_epidemic/"
+  },
+  "headline": "Markov Epidemic, a stochastic model for disease outbreak",
+  
+  "image": [
+    "https://sauxpa.github.io/post/markov_epidemic/featured.png"
+  ],
+  
+  "datePublished": "2020-04-24T00:00:00Z",
+  "dateModified": "2021-04-12T12:56:07+02:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Patrick Saux"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Patrick Saux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sauxpa.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "A humble lockdown project to model the interplay between the structure of a network and the spread of epidemics over it."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Markov Epidemic, a stochastic model for disease outbreak | Patrick Saux</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="e2dfa803bac6d8a5d57eb3493bc5047c" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7a224883d792570fd34d30c7134eace3.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Patrick Saux</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Patrick Saux</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/teaching/"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Markov Epidemic, a stochastic model for disease outbreak</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Patrick Saux</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Apr 12, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i></span>
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 784px; max-height: 352px;">
+  <div style="position: relative">
+    <img src="/post/markov_epidemic/featured.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>A few years ago, I had the chance to work at ENS Cachan (now ENS Paris-Saclay) on statistical inference of networks based on how information propagates on them. Back then, we used to think in terms of networks of individuals subject to diseases that spread among neighbors, but more realistic application domains were thought to be computer malwares or viral marketing online. Obviously times have changed, and with several weeks of lockdown ahead, I thought about revisiting some of this work in the light of the recent events.</p>
+<p>This article aims to describe a simple model to simulate random disease outbreak and provide empirical evidence of the role of the network topology. In layman&rsquo;s terms, the sparser the network, such as one describing a population under lockdown, the slower the propagation and the flatter the epidemic peak.</p>
+<p>This post is intended to be fairly non-technical. All experiments shown are based on numerical models and do not claim to accurately represent real-life epidemics. All the code (a small Python library and a few notebooks) and more detailed mathematical explanations can be found <a href="https://github.com/sauxpa/markov_epidemic" target="_blank" rel="noopener">HERE</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-the-template-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png" alt="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      The template is mobile first with a responsive design to ensure that your site looks stunning on every device.
+    </figcaption></figure>
+<h2 id="why-stochastic-models">Why stochastic models?</h2>
+<p>The use of randomness to simulate complex systems is ubiquitous in mathematics, engineering and sciences in general. The general principle is to build an engine to generate plausible scenarios for the evolution of the system and sample multiple independent realizations to study the average or extreme behaviors.</p>
+<p>Before we move on to such models, let us briefly recall some standard deterministic models in epidemiology. These are called compartmental models, because they model the evolution of a patient as going through successive stages, or compartments. Three popular variants of this idea are :</p>
+<ul>
+<li>
+<p>Susceptible-Infected-Recovered (<strong>SIR</strong>) : all patients are initially susceptible, then can be infected, and then are removed from the system (either they are fully immune or they died),</p>
+</li>
+<li>
+<p>Susceptible-Infected-Susceptible (<strong>SIS</strong>) : same but patients can be infected multiple times,</p>
+</li>
+<li>
+<p>Susceptible-Exposed-Infectious-Recovered (<strong>SEIR</strong>) : similar to SIR, with an extra compartment to model incubation time, during which patient are not yet infectious.</p>
+</li>
+</ul>
+<p>Under mean-field assumptions, i.e every individual in a large population shares the same likelihood of being infected by the rest, one can derive a deterministic system of differential equations describing the evolution of the fraction of infected individuals (see for example <a href="https://ieeexplore.ieee.org/document/130801" target="_blank" rel="noopener">Kephart &amp; White</a>).</p>
+<p>While such models are easy to understand and scale very well, they lack any description of the fine structure of the underlying social network. For example, what if the network contains highly social individuals that may act as hubs for the propagation?</p>
+<h2 id="markov-models">Markov models</h2>
+<p>A large class of popular stochastic models follow the <strong>Markov property</strong> : the future evolution depends only on the present state, not the past history. While debatable, it allows for very flexible still numerically tractable models.</p>
+<p>Consider a network <strong>G</strong>, that is a list of individuals (for instance 1, &hellip;, N) and a list of pairs <strong>(i, j)</strong> if individuals <strong>i</strong> and <strong>j</strong> are neighbors. We will stick to this simple framework, but generalization to weighted or directed networks is straightforward.</p>
+<p>SIS, SIR and SEIR can be naturally translated to the language of Markov processes by specifying the probability of transition between compartments. As is customary with continuous-time processes, we will actually define the transition rates rather than the probability (the two are related by the fact that transition events follow exponential distributions with parameters equal to the transition rates).</p>
+<p>For any individual, we assume a transition susceptible -&gt; infected (or susceptible -&gt; exposed in SEIR) at rate <em>proportional to the number of infected neighbors</em>. This is quite natural: the more one is surrounded by infectious people, the riskier (note that here again there is room for more complicated designs by using a nonlinear aggregation function over the neighbors). The other transitions, (I-&gt;S in SIS, I-&gt;R in SIR, E-&gt;I and I-&gt;R in SEIR) are assumed to occur at constant rates (think of it as sick people being put in isolation).</p>
+<h2 id="experiments">Experiments</h2>
+<h3 id="sir">SIR</h3>
+<p>First let us simulate the effect of a severe lockdown in SIR. For that, we compare the evolution of the number of cases for the same epidemic (same transition rates parameters) on two different regular networks :</p>
+<ul>
+<li><strong>sparse</strong>: every node is connected to 10 other nodes,</li>
+<li><strong>dense</strong>: every node is connected to 100 other nodes.</li>
+</ul>
+<p>In the sparse scenario, a typical outbreak has a long plateau and a slow decrease, but a much smaller peak. In the dense case, almost all the population gets infected at a very early stage, creating a sharp peak, followed by a brutal, but slower decrease. The blue curve below is a typical lockdown strategic goal (flat and slow) while the red curve is more inline with a herd immunity viewpoint.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://github.com/sauxpa/markov_epidemic/blob/master/pictures/sir_epidemic.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>To be a bit more quantitative about the shape of the curve, one can try to regress a parametric form on it. In all experiments, sparse SIR leads to an approximately normal form while dense SIR is better fitted by a skewed shape such as lognormal. In other words, network sparsification is not <em>just</em> about flattening the curve, but also controlling the slope.</p>
+<h3 id="hub-effect">Hub effect</h3>
+<p>Another empirical effect is the <em>Hub effect</em>, which is that highly connected nodes are critical for propagation. This typically happens in social networks (a few very popular nodes attract most of the attention) and can be described as <strong>preferential attachment networks</strong>: starting from a small population of nodes, a larger network is grown by adding follower nodes that connect to the existing ones with probability proportional to the number of already existing neighbors.</p>
+<p>In the case of SIS over a preferential attachment network, we compare two outbreak scenarios:</p>
+<ul>
+<li>a single patient zero, the one with the most neighbors,</li>
+<li>5 patient zeros, drawn at random (and therefore likely to be follower nodes).</li>
+</ul>
+<p>Unless a hub is targeted, the epidemic usually dies fast without reaching highly-connected zones, even with more initial patients.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://github.com/sauxpa/markov_epidemic/blob/master/pictures/hub_vs_random.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h3 id="comparison-with-deterministic-models">Comparison with deterministic models</h3>
+<p>As argued above, deterministic models à la Kephart &amp; White can be seen as scaling limits of Markov models on regular networks, i.e when the local structure of the network is the same everywhere one looks.</p>
+<p>This is indeed empirically validated, see for example in the case of SIR and SIS below.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-sir">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://github.com/sauxpa/markov_epidemic/blob/master/pictures/sir_deterministic.png" alt="SIR" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      SIR
+    </figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-sis">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://github.com/sauxpa/markov_epidemic/blob/master/pictures/sis_deterministic.png" alt="SIS" loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      SIS
+    </figcaption></figure>
+<h3 id="comparison-with-real-data-as-of-april-2020">Comparison with real data (as of April 2020)</h3>
+<p>This is still a work-in-progress, made practically difficult by the number and quality of available data. One interesting direction would be to fit one of these models (for example SEIR) to the curve of tested cases of COVID-19 (which is typically noisy and subject to bias, including periodic bias, for instance during the week-ends when medical staff are not tested).</p>
+<p>To be clear, calibrating the model here means tuning the transition rates for S-&gt;E, E-&gt;I and I-&gt;R such that the average curve over multiple epidemic scenarios resembles the most the collected data (for the example in the least squares sense).</p>
+<p>From there, one could investigate different types of representative networks to determine the ones that reproduce the best the observed trends, and use this as a starting point for further predictions (epidemic evolution, impact of lockdown exit&hellip;).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://github.com/sauxpa/markov_epidemic/blob/master/pictures/seir_france.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h2 id="going-further">Going further</h2>
+<p>A very attractive aspect of stochastic simulation is the ability to perform numerical experiments. However, the topic of random processes over networks has been studied a lot on the theoretical side as well. A few selected references include :</p>
+<ul>
+<li>
+<p><a href="https://www.nas.ewi.tudelft.nl/people/Piet/papers/IEEEToN_virusspread.pdf" target="_blank" rel="noopener">Virus Spreads in Networks</a> by Van Mieghem et al., which formalizes the definition of epidemic as a Markov process on the configuration space,</p>
+</li>
+<li>
+<p><a href="https://people.maths.bris.ac.uk/~maajg/infocom-worm.pdf" target="_blank" rel="noopener">The Effect of Network Topology on the Spread of Epidemics</a> by Massoulié et al., which exhibits a phase transition between short-lived and long-lived epidemics in terms of the transition rates and the adjacency spectral radius of the network,</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/1004.0060.pdf" target="_blank" rel="noopener">Got the Flu (or Mumps)? Check the Eigenvalue!</a> in the same spirit, which relates spectral properties of the network to critical epidemic regimes in different models.</p>
+</li>
+</ul>
+<p>Also check out this <a href="https://github.com/sauxpa/markov_epidemic" target="_blank" rel="noopener">repo</a> for more implementation details, including a Bokeh app to dynamically play with different network and epidemic parameters.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://github.com/sauxpa/markov_epidemic/blob/master/pictures/bokeh_example.png" alt="" loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>Enjoy!</p>
+<h2 id="license">License</h2>
+<p>Copyright 2020-present <a href="https://sauxpa.github.io/" target="_blank" rel="noopener">Patrick Saux</a>.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://sauxpa.github.io/post/markov_epidemic/&amp;text=Markov%20Epidemic,%20a%20stochastic%20model%20for%20disease%20outbreak" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://sauxpa.github.io/post/markov_epidemic/&amp;t=Markov%20Epidemic,%20a%20stochastic%20model%20for%20disease%20outbreak" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Markov%20Epidemic,%20a%20stochastic%20model%20for%20disease%20outbreak&amp;body=https://sauxpa.github.io/post/markov_epidemic/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://sauxpa.github.io/post/markov_epidemic/&amp;title=Markov%20Epidemic,%20a%20stochastic%20model%20for%20disease%20outbreak" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Markov%20Epidemic,%20a%20stochastic%20model%20for%20disease%20outbreak%20https://sauxpa.github.io/post/markov_epidemic/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://sauxpa.github.io/post/markov_epidemic/&amp;title=Markov%20Epidemic,%20a%20stochastic%20model%20for%20disease%20outbreak" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.8639e659f65962624a478a4f30616925.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

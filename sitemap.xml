@@ -29,7 +29,7 @@
   
   <url>
     <loc>https://sauxpa.github.io/</loc>
-    <lastmod>2021-04-06T00:46:15+02:00</lastmod>
+    <lastmod>2021-04-12T12:56:07+02:00</lastmod>
   </url>
   
   <url>
@@ -38,48 +38,8 @@
   </url>
   
   <url>
-    <loc>https://sauxpa.github.io/tag/academic/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/categories/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/category/demo/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/tags/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/post/getting-started/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc></loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/tag/%E5%BC%80%E6%BA%90/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sauxpa.github.io/category/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2021-01-23T19:11:34+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc></loc>
-    <lastmod>2021-03-10T10:59:21+01:00</lastmod>
+    <lastmod>2021-04-12T12:56:07+02:00</lastmod>
   </url>
   
   <url>
@@ -115,6 +75,11 @@
   <url>
     <loc>https://sauxpa.github.io/projects/markov-epidemic/</loc>
     <lastmod>2021-03-10T10:48:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sauxpa.github.io/post/markov_epidemic/</loc>
+    <lastmod>2021-04-12T12:56:07+02:00</lastmod>
   </url>
   
   <url>
@@ -173,6 +138,10 @@
   </url>
   
   <url>
+    <loc>https://sauxpa.github.io/categories/</loc>
+  </url>
+  
+  <url>
     <loc></loc>
     <lastmod>2021-03-09T21:28:52+01:00</lastmod>
   </url>
@@ -190,6 +159,10 @@
   <url>
     <loc>https://sauxpa.github.io/event/</loc>
     <lastmod>2021-01-23T19:43:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sauxpa.github.io/tags/</loc>
   </url>
   
   <url>
