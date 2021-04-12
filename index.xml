@@ -132,26 +132,6 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
       <description>&lt;p&gt;A few years ago, I had the chance to work at ENS Cachan (now ENS Paris-Saclay) on statistical inference of networks based on how information propagates on them. Back then, we used to think in terms of networks of individuals subject to diseases that spread among neighbors, but more realistic application domains were thought to be computer malwares or viral marketing online. Obviously times have changed, and with several weeks of lockdown ahead, I thought about revisiting some of this work in the light of the recent events.&lt;/p&gt;
 &lt;p&gt;This article aims to describe a simple model to simulate random disease outbreak and provide empirical evidence of the role of the network topology. In layman&amp;rsquo;s terms, the sparser the network, such as one describing a population under lockdown, the slower the propagation and the flatter the epidemic peak.&lt;/p&gt;
 &lt;p&gt;This post is intended to be fairly non-technical. All experiments shown are based on numerical models and do not claim to accurately represent real-life epidemics. All the code (a small Python library and a few notebooks) and more detailed mathematical explanations can be found &lt;a href=&#34;https://github.com/sauxpa/markov_epidemic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;HERE&lt;/a&gt;.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-the-template-is-mobile-first-with-a-responsive-design-to-ensure-that-your-site-looks-stunning-on-every-device&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png&#34; alt=&#34;The template is mobile first with a responsive design to ensure that your site looks stunning on every device.&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      The template is mobile first with a responsive design to ensure that your site looks stunning on every device.
-    &lt;/figcaption&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;why-stochastic-models&#34;&gt;Why stochastic models?&lt;/h2&gt;
 &lt;p&gt;The use of randomness to simulate complex systems is ubiquitous in mathematics, engineering and sciences in general. The general principle is to build an engine to generate plausible scenarios for the evolution of the system and sample multiple independent realizations to study the average or extreme behaviors.&lt;/p&gt;
 &lt;p&gt;Before we move on to such models, let us briefly recall some standard deterministic models in epidemiology. These are called compartmental models, because they model the evolution of a patient as going through successive stages, or compartments. Three popular variants of this idea are :&lt;/p&gt;
@@ -197,7 +177,15 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/sauxpa/markov_epidemic/blob/master/pictures/sir_epidemic.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_753110b1f92e061c07f71789c2e14432.png 400w,
+               /post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_f8ff2490b6239e5a2685014d629a0633.png 760w,
+               /post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_753110b1f92e061c07f71789c2e14432.png&#34;
+               width=&#34;760&#34;
+               height=&#34;341&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;To be a bit more quantitative about the shape of the curve, one can try to regress a parametric form on it. In all experiments, sparse SIR leads to an approximately normal form while dense SIR is better fitted by a skewed shape such as lognormal. In other words, network sparsification is not &lt;em&gt;just&lt;/em&gt; about flattening the curve, but also controlling the slope.&lt;/p&gt;
 &lt;h3 id=&#34;hub-effect&#34;&gt;Hub effect&lt;/h3&gt;
@@ -224,7 +212,15 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/sauxpa/markov_epidemic/blob/master/pictures/hub_vs_random.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_ed62bd64dcbda2b3319ef17b4e28d61d.png 400w,
+               /post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_650756bb85b5c00bfd2cc327d19dd111.png 760w,
+               /post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_ed62bd64dcbda2b3319ef17b4e28d61d.png&#34;
+               width=&#34;760&#34;
+               height=&#34;288&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;comparison-with-deterministic-models&#34;&gt;Comparison with deterministic models&lt;/h3&gt;
 &lt;p&gt;As argued above, deterministic models à la Kephart &amp;amp; White can be seen as scaling limits of Markov models on regular networks, i.e when the local structure of the network is the same everywhere one looks.&lt;/p&gt;
@@ -245,7 +241,15 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
 
 &lt;figure  id=&#34;figure-sir&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/sauxpa/markov_epidemic/blob/master/pictures/sir_deterministic.png&#34; alt=&#34;SIR&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;SIR&#34; srcset=&#34;
+               /post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_d3952863f378caff3554b7b216d5c0a8.png 400w,
+               /post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_46ce97148d78dec3cf4eb849093ab0ba.png 760w,
+               /post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_d3952863f378caff3554b7b216d5c0a8.png&#34;
+               width=&#34;760&#34;
+               height=&#34;406&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       SIR
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -265,7 +269,15 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
 
 &lt;figure  id=&#34;figure-sis&#34;&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/sauxpa/markov_epidemic/blob/master/pictures/sis_deterministic.png&#34; alt=&#34;SIS&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;SIS&#34; srcset=&#34;
+               /post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_b0cbeba6548d5129061079721089c5c6.png 400w,
+               /post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_a40400e224df58d49b18ebe2c5e779af.png 760w,
+               /post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_b0cbeba6548d5129061079721089c5c6.png&#34;
+               width=&#34;760&#34;
+               height=&#34;406&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;figcaption&gt;
       SIS
     &lt;/figcaption&gt;&lt;/figure&gt;
@@ -289,7 +301,15 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/sauxpa/markov_epidemic/blob/master/pictures/seir_france.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_6edc74497c447be9ad4a4946aa8515a8.png 400w,
+               /post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_05f05d5ee7788f53a3f23cba150ef448.png 760w,
+               /post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_6edc74497c447be9ad4a4946aa8515a8.png&#34;
+               width=&#34;760&#34;
+               height=&#34;341&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;h2 id=&#34;going-further&#34;&gt;Going further&lt;/h2&gt;
 &lt;p&gt;A very attractive aspect of stochastic simulation is the ability to perform numerical experiments. However, the topic of random processes over networks has been studied a lot on the theoretical side as well. A few selected references include :&lt;/p&gt;
@@ -321,7 +341,15 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;https://github.com/sauxpa/markov_epidemic/blob/master/pictures/bokeh_example.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_8572e262f8f4e2e3fc9df585a6284eb8.png 400w,
+               /post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_86cedf0a8fe7cd218dfcce85f02778fc.png 760w,
+               /post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_1200x1200_fit_lanczos_2.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_8572e262f8f4e2e3fc9df585a6284eb8.png&#34;
+               width=&#34;760&#34;
+               height=&#34;525&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;Enjoy!&lt;/p&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
