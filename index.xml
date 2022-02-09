@@ -39,7 +39,9 @@
       <link>https://sauxpa.github.io/teaching/rl_x_2022/model_based/</link>
       <pubDate>Wed, 09 Feb 2022 00:00:00 +0000</pubDate>
       <guid>https://sauxpa.github.io/teaching/rl_x_2022/model_based/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;model_based.zip&#34;&gt;Practical session&lt;/a&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;Model-based MDP: value iteration when the transition probabilities and rewards are known, UCRL algorithms when they are estimated from observations.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;model_based.zip&#34;&gt;Practical session&lt;/a&gt;
+&lt;a href=&#34;model_based_answers.zip&#34;&gt;Answers&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
