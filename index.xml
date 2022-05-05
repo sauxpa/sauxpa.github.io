@@ -110,7 +110,7 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
     </item>
     
     <item>
-      <title>IFSO-EC Congress on Obesity</title>
+      <title>6 May 2022: IFSO-EC Congress on Obesity</title>
       <link>https://sauxpa.github.io/talks/ifso_2022/</link>
       <pubDate>Sun, 05 Jun 2022 17:00:00 +0000</pubDate>
       <guid>https://sauxpa.github.io/talks/ifso_2022/</guid>
@@ -447,6 +447,22 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
     </item>
     
     <item>
+      <title>26 November 2021: Scool Seminar</title>
+      <link>https://sauxpa.github.io/talks/scool_seminar_ds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sauxpa.github.io/talks/scool_seminar_ds/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>29 April 2022: General Assembly SOPHIA</title>
+      <link>https://sauxpa.github.io/talks/sophia_hillerod/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://sauxpa.github.io/talks/sophia_hillerod/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>From Optimality to Robustness: Dirichlet Sampling Strategies in Stochastic Bandits</title>
       <link>https://sauxpa.github.io/research/dirichlet_sampling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -471,26 +487,10 @@ Supplementary notes can be added here, including [code, math, and images](https:
     </item>
     
     <item>
-      <title>General Assembly SOPHIA</title>
-      <link>https://sauxpa.github.io/talks/sophia_hillerod/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://sauxpa.github.io/talks/sophia_hillerod/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>rlberry</title>
       <link>https://sauxpa.github.io/projects/rlberry/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://sauxpa.github.io/projects/rlberry/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scool Seminar</title>
-      <link>https://sauxpa.github.io/talks/scool_seminar_ds/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://sauxpa.github.io/talks/scool_seminar_ds/</guid>
       <description></description>
     </item>
     
