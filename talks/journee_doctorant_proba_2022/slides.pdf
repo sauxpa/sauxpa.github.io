@@ -1,0 +1,10 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 404 must authenticate</title>
+</head>
+<body><h2>HTTP ERROR 404</h2>
+<p>Problem accessing /service/home/~/. Reason:
+<pre>    must authenticate</pre></p>
+</body>
+</html>
