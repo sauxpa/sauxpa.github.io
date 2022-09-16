@@ -7,7 +7,7 @@
     <description>Patrick Saux</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-uk</language><lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://sauxpa.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <url>https://sauxpa.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Patrick Saux</title>
       <link>https://sauxpa.github.io/</link>
     </image>
@@ -126,7 +126,7 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Weight Trajectory Online Calculator</title>
+      <title>Bariatric Weight Trajectory Prediction</title>
       <link>https://sauxpa.github.io/projects/weight-trajectory-prediction/</link>
       <pubDate>Sun, 08 May 2022 14:47:06 +0100</pubDate>
       <guid>https://sauxpa.github.io/projects/weight-trajectory-prediction/</guid>
@@ -260,10 +260,10 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
-               /post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_753110b1f92e061c07f71789c2e14432.png 400w,
-               /post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_f8ff2490b6239e5a2685014d629a0633.png 760w,
-               /post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://sauxpa.github.io/post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_753110b1f92e061c07f71789c2e14432.png&#34;
+               /post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_ae24a863317adf89408b7ccb4aa5a8f5.png 400w,
+               /post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_dc6a7d730c58a00a100e4a979e556065.png 760w,
+               /post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/sir_epidemic_hue3db7a9b1cec0260dc444a8ba0dbf146_38896_ae24a863317adf89408b7ccb4aa5a8f5.png&#34;
                width=&#34;760&#34;
                height=&#34;341&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -295,10 +295,10 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
-               /post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_ed62bd64dcbda2b3319ef17b4e28d61d.png 400w,
-               /post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_650756bb85b5c00bfd2cc327d19dd111.png 760w,
-               /post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://sauxpa.github.io/post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_ed62bd64dcbda2b3319ef17b4e28d61d.png&#34;
+               /post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_4886a62a08d0d13dd2c8a5fa5745b5ec.png 400w,
+               /post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_aa44372e8f974abf4453a85379d5865c.png 760w,
+               /post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/hub_vs_random_hu945a41100d4231982b05564604e941aa_44160_4886a62a08d0d13dd2c8a5fa5745b5ec.png&#34;
                width=&#34;760&#34;
                height=&#34;288&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -324,10 +324,10 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;SIR&#34; srcset=&#34;
-               /post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_d3952863f378caff3554b7b216d5c0a8.png 400w,
-               /post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_46ce97148d78dec3cf4eb849093ab0ba.png 760w,
-               /post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://sauxpa.github.io/post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_d3952863f378caff3554b7b216d5c0a8.png&#34;
+               /post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_5e9b1458f1c5822dfd8a7d61e318fddc.png 400w,
+               /post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_84b327bf2a0659118ee0c9659c368560.png 760w,
+               /post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/sir_deterministic_hu8699e696a741ec40be17a8e3b92182c8_38195_5e9b1458f1c5822dfd8a7d61e318fddc.png&#34;
                width=&#34;760&#34;
                height=&#34;406&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -352,10 +352,10 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;SIS&#34; srcset=&#34;
-               /post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_b0cbeba6548d5129061079721089c5c6.png 400w,
-               /post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_a40400e224df58d49b18ebe2c5e779af.png 760w,
-               /post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://sauxpa.github.io/post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_b0cbeba6548d5129061079721089c5c6.png&#34;
+               /post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_30a5f5ab0fcfb6caf0bda833bde40b13.png 400w,
+               /post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_b0973078d91d62c3ab05a671e6a6a5f0.png 760w,
+               /post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/sis_deterministic_hu6f05b0ba611a9dd140145b059187cacd_41995_30a5f5ab0fcfb6caf0bda833bde40b13.png&#34;
                width=&#34;760&#34;
                height=&#34;406&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -384,10 +384,10 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
-               /post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_6edc74497c447be9ad4a4946aa8515a8.png 400w,
-               /post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_05f05d5ee7788f53a3f23cba150ef448.png 760w,
-               /post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://sauxpa.github.io/post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_6edc74497c447be9ad4a4946aa8515a8.png&#34;
+               /post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_e6bac73770a657dca40d1507ed013e05.png 400w,
+               /post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_80e12fbf403b1b95dbff3500415850a4.png 760w,
+               /post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/seir_france_hu6a4ec7a8907334a61116910f29942a3f_41715_e6bac73770a657dca40d1507ed013e05.png&#34;
                width=&#34;760&#34;
                height=&#34;341&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -424,10 +424,10 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
-               /post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_8572e262f8f4e2e3fc9df585a6284eb8.png 400w,
-               /post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_86cedf0a8fe7cd218dfcce85f02778fc.png 760w,
-               /post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_1200x1200_fit_lanczos_2.png 1200w&#34;
-               src=&#34;https://sauxpa.github.io/post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_8572e262f8f4e2e3fc9df585a6284eb8.png&#34;
+               /post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_0346892dd2e251724b8d6fa462f712ff.png 400w,
+               /post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_4980a817c69a8efc1fc0921f86bcb581.png 760w,
+               /post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/markov_epidemic/bokeh_example_hue8dbace8aa1f04c35cf3cc25e25b08c3_325440_0346892dd2e251724b8d6fa462f712ff.png&#34;
                width=&#34;760&#34;
                height=&#34;525&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
