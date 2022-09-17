@@ -64,8 +64,8 @@ which is a stopping time with respect to the natural filtration $\left(\mathcal{
 &lt;p&gt;The reader versed in martingales will almost surely recognise this problem as an instance of gambler&amp;rsquo;s ruin. Indeed, the distribution of $\tau_{\alpha}$ can be fully explicited when the increments $\xi$ are Gaussian. For completeness, we derive below this standard result using stochastic calculus.&lt;/p&gt;
 &lt;p&gt;For convenience, we consider the continuous time setting, i.e. $t\in\mathbb{R}_+$ instead of $t\in\mathbb{N}$ and define the process $Z$ as
 \begin{align*}
-&amp;amp;dZ_t = \mu dt + \sigma dW_t\,,\&lt;br&gt;
-&amp;amp;Z_0=0\,,\&lt;br&gt;
+&amp;amp;dZ_t = \mu dt + \sigma dW_t\,,\\&lt;br&gt;
+&amp;amp;Z_0=0\,,
 \end{align*}
 where $\mu=0.63$, $\sigma=20.67$ and $W$ is a standard Brownian motion with respect to the filtration $\mathcal{F}$. Intuitively, we retrieve the discrete time model by the correspondence $dt\approx 1$ and $dW_t \approx \xi_t$. The loss process $Z$ can be more directly expressed as
 $$
