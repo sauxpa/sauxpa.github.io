@@ -49,9 +49,9 @@
 &lt;p&gt;The expected gain of a ticket chosen uniformly at random (which I assume is how tickets are assigned to vendors) can be easily calculated from the above information and reads $\mathbb{E}[gain] = \sum_{x} x\mathbb{P}(gain=x) = 1.37$. After substracting the €2 cost of a ticket, the expected net payoff of a single Astro ticket is then $-0.63$. This makes perfect sense: the company that issues these tickets makes 63 cents on each, i.e about €2.3m in total.&lt;/p&gt;
 &lt;p&gt;In addition, we can also compute the variance with the formula $\sigma^2 = \mathbb{E}[gain^2] - \mathbb{E}[gain]^2$, which gives $\sigma\approx 20.67$.&lt;/p&gt;
 &lt;h2 id=&#34;flight-time&#34;&gt;Flight time&lt;/h2&gt;
-&lt;p&gt;Going back to our initial question: how long can we defy the odds and keep &amp;ldquo;flying&amp;rdquo; from only the initial investment of €2? Let&amp;rsquo;s introduce some notations. We denote by $\left(g_t\right)&lt;em&gt;{t\in\mathbb{N}}$ a sequence of i.i.d samples drawn from the Astro distribution and let $\xi_t = 2 - g_t$ be the corresponding net &lt;em&gt;loss&lt;/em&gt;, including the ticket price, and
+&lt;p&gt;Going back to our initial question: how long can we defy the odds and keep &amp;ldquo;flying&amp;rdquo; from only the initial investment of €2? Let&amp;rsquo;s introduce some notations. We denote by $\left( g_t \right)_{t\in\mathbb{N}}$ a sequence of i.i.d samples drawn from the Astro distribution and let $\xi_t = 2 - g_t$ be the corresponding net &lt;em&gt;loss&lt;/em&gt;, including the ticket price, and
 $$
-X_t = \sum&lt;/em&gt;{s=1}^t \xi_s
+X_t = \sum_{s=1}^t \xi_s
 $$
 be the cumulative loss process.&lt;/p&gt;
 &lt;p&gt;Note that the i.i.d assumption does not exactly hold: once a ticket is bought and scratched, it is removed from the pool of available tickets and cannot be acquired again, i.e. the true sampling is &lt;em&gt;without replacement&lt;/em&gt;. We will see later that this only has a limited impact on the final result, which is quite intuitive: if you draw only a few samples, say a few dozens at most, with replacement, it is quite unlikely that you would sample twice the same among the $N=4,500,000$.&lt;/p&gt;

@@ -308,7 +308,7 @@
         content="2022-09-17T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-09-17T14:43:07&#43;02:00">
+    <meta property="article:modified_time" content="2022-09-17T14:46:08&#43;02:00">
   
 
   
@@ -341,7 +341,7 @@
   ],
   
   "datePublished": "2022-09-17T00:00:00Z",
-  "dateModified": "2022-09-17T14:43:07+02:00",
+  "dateModified": "2022-09-17T14:46:08+02:00",
   
   "author": {
     "@type": "Person",
@@ -927,9 +927,9 @@
 <p>The expected gain of a ticket chosen uniformly at random (which I assume is how tickets are assigned to vendors) can be easily calculated from the above information and reads $\mathbb{E}[gain] = \sum_{x} x\mathbb{P}(gain=x) = 1.37$. After substracting the €2 cost of a ticket, the expected net payoff of a single Astro ticket is then $-0.63$. This makes perfect sense: the company that issues these tickets makes 63 cents on each, i.e about €2.3m in total.</p>
 <p>In addition, we can also compute the variance with the formula $\sigma^2 = \mathbb{E}[gain^2] - \mathbb{E}[gain]^2$, which gives $\sigma\approx 20.67$.</p>
 <h2 id="flight-time">Flight time</h2>
-<p>Going back to our initial question: how long can we defy the odds and keep &ldquo;flying&rdquo; from only the initial investment of €2? Let&rsquo;s introduce some notations. We denote by $\left(g_t\right)<em>{t\in\mathbb{N}}$ a sequence of i.i.d samples drawn from the Astro distribution and let $\xi_t = 2 - g_t$ be the corresponding net <em>loss</em>, including the ticket price, and
+<p>Going back to our initial question: how long can we defy the odds and keep &ldquo;flying&rdquo; from only the initial investment of €2? Let&rsquo;s introduce some notations. We denote by $\left( g_t \right)_{t\in\mathbb{N}}$ a sequence of i.i.d samples drawn from the Astro distribution and let $\xi_t = 2 - g_t$ be the corresponding net <em>loss</em>, including the ticket price, and
 $$
-X_t = \sum</em>{s=1}^t \xi_s
+X_t = \sum_{s=1}^t \xi_s
 $$
 be the cumulative loss process.</p>
 <p>Note that the i.i.d assumption does not exactly hold: once a ticket is bought and scratched, it is removed from the pool of available tickets and cannot be acquired again, i.e. the true sampling is <em>without replacement</em>. We will see later that this only has a limited impact on the final result, which is quite intuitive: if you draw only a few samples, say a few dozens at most, with replacement, it is quite unlikely that you would sample twice the same among the $N=4,500,000$.</p>
