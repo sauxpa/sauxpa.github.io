@@ -236,46 +236,6 @@ $$&lt;/p&gt;
     </item>
     
     <item>
-      <title>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [2]</title>
-      <link>https://sauxpa.github.io/post/astro_2/</link>
-      <pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://sauxpa.github.io/post/astro_2/</guid>
-      <description>&lt;h2 id=&#34;assessing-the-quality-of-the-gaussian-approximation&#34;&gt;Assessing the quality of the Gaussian approximation&lt;/h2&gt;
-&lt;p&gt;In the previous post, we have calculated the distribution of the flight time of the cumulative Gaussian loss process $Z_t=\mu t + \sigma W_t$, that is $\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, Z_t \geq \alpha \right\rbrace$. In the game of Astro though, the loss distribution for scratching a card is far from being Gaussian: it is discrete, asymmetrical, with pronounced skewness towards small losses. The figure below shows the difference between the true Astro distribution (in green) and its Gaussian approximation $\mathcal{N}(\mu, \sigma^2)$ (in blue), with $\mu=0.63$ and $\sigma=$&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  &gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;
-        &lt;img alt=&#34;&#34; srcset=&#34;
-               /post/astro_2/astro_vs_gaussian_distributions_hu784e2b336dd120e660d8cd5d55f1da69_28206_b17770fb13e447d776298f766eb32e5e.png 400w,
-               /post/astro_2/astro_vs_gaussian_distributions_hu784e2b336dd120e660d8cd5d55f1da69_28206_57e34b5991410d1a36b3a742cccca0fa.png 760w,
-               /post/astro_2/astro_vs_gaussian_distributions_hu784e2b336dd120e660d8cd5d55f1da69_28206_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://sauxpa.github.io/post/astro_2/astro_vs_gaussian_distributions_hu784e2b336dd120e660d8cd5d55f1da69_28206_b17770fb13e447d776298f766eb32e5e.png&#34;
-               width=&#34;496&#34;
-               height=&#34;352&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
-&lt;p&gt;Next time, we&amp;rsquo;ll talk about the flight time for the true Astro distribution, rather than under the Gaussian approximation. Closed-form expression of $\tau_{\alpha}$ are not available in this case, so simulations will prove handy.&lt;/p&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;Copyright 2022-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>15 September 2022: SOFFCO-MM, Montpellier, FR</title>
       <link>https://sauxpa.github.io/talks/soffcomm_2022/</link>
       <pubDate>Thu, 15 Sep 2022 17:00:00 +0000</pubDate>
