@@ -305,7 +305,7 @@
         content="2020-04-24T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2021-04-12T13:01:04&#43;02:00">
+    <meta property="article:modified_time" content="2022-09-17T13:59:16&#43;02:00">
   
 
   
@@ -338,7 +338,7 @@
   ],
   
   "datePublished": "2020-04-24T00:00:00Z",
-  "dateModified": "2021-04-12T13:01:04+02:00",
+  "dateModified": "2022-09-17T13:59:16+02:00",
   
   "author": {
     "@type": "Person",
@@ -807,7 +807,7 @@
           Last updated on
       
     
-    Apr 12, 2021
+    Sep 17, 2022
   </span>
   
 
@@ -895,10 +895,10 @@
 
     <div class="article-style">
       <p>A few years ago, I had the chance to work at ENS Cachan (now ENS Paris-Saclay) on statistical inference of networks based on how information propagates on them. Back then, we used to think in terms of networks of individuals subject to diseases that spread among neighbors, but more realistic application domains were thought to be computer malwares or viral marketing online. Obviously times have changed, and with several weeks of lockdown ahead, I thought about revisiting some of this work in the light of the recent events.</p>
-<p>This article aims to describe a simple model to simulate random disease outbreak and provide empirical evidence of the role of the network topology. In layman&rsquo;s terms, the sparser the network, such as one describing a population under lockdown, the slower the propagation and the flatter the epidemic peak.</p>
+<p>This article aims to describe a simple model to simulate random disease outbreaks and provide empirical evidence of the role of the network topology. In layman&rsquo;s terms, the sparser the network, such as one describing a population under lockdown, the slower the propagation and the flatter the epidemic peak.</p>
 <p>This post is intended to be fairly non-technical. All experiments shown are based on numerical models and do not claim to accurately represent real-life epidemics. All the code (a small Python library and a few notebooks) and more detailed mathematical explanations can be found <a href="https://github.com/sauxpa/markov_epidemic" target="_blank" rel="noopener">HERE</a>.</p>
 <h2 id="why-stochastic-models">Why stochastic models?</h2>
-<p>The use of randomness to simulate complex systems is ubiquitous in mathematics, engineering and sciences in general. The general principle is to build an engine to generate plausible scenarios for the evolution of the system and sample multiple independent realizations to study the average or extreme behaviors.</p>
+<p>The use of randomness to simulate complex systems is ubiquitous in mathematics, engineering and sciences in general. The general principle is to build an engine to generate plausible scenarios for the evolution of the system and sample multiple independent realisations to study the average or extreme behaviours.</p>
 <p>Before we move on to such models, let us briefly recall some standard deterministic models in epidemiology. These are called compartmental models, because they model the evolution of a patient as going through successive stages, or compartments. Three popular variants of this idea are :</p>
 <ul>
 <li>
@@ -915,7 +915,7 @@
 <p>While such models are easy to understand and scale very well, they lack any description of the fine structure of the underlying social network. For example, what if the network contains highly social individuals that may act as hubs for the propagation?</p>
 <h2 id="markov-models">Markov models</h2>
 <p>A large class of popular stochastic models follow the <strong>Markov property</strong> : the future evolution depends only on the present state, not the past history. While debatable, it allows for very flexible still numerically tractable models.</p>
-<p>Consider a network <strong>G</strong>, that is a list of individuals (for instance 1, &hellip;, N) and a list of pairs <strong>(i, j)</strong> if individuals <strong>i</strong> and <strong>j</strong> are neighbors. We will stick to this simple framework, but generalization to weighted or directed networks is straightforward.</p>
+<p>Consider a network <strong>G</strong>, that is a list of individuals (for instance 1, &hellip;, N) and a list of pairs <strong>(i, j)</strong> if individuals <strong>i</strong> and <strong>j</strong> are neighbors. We will stick to this simple framework, but generalisation to weighted or directed networks is straightforward.</p>
 <p>SIS, SIR and SEIR can be naturally translated to the language of Markov processes by specifying the probability of transition between compartments. As is customary with continuous-time processes, we will actually define the transition rates rather than the probability (the two are related by the fact that transition events follow exponential distributions with parameters equal to the transition rates).</p>
 <p>For any individual, we assume a transition susceptible -&gt; infected (or susceptible -&gt; exposed in SEIR) at rate <em>proportional to the number of infected neighbors</em>. This is quite natural: the more one is surrounded by infectious people, the riskier (note that here again there is room for more complicated designs by using a nonlinear aggregation function over the neighbors). The other transitions, (I-&gt;S in SIS, I-&gt;R in SIR, E-&gt;I and I-&gt;R in SEIR) are assumed to occur at constant rates (think of it as sick people being put in isolation).</p>
 <h2 id="experiments">Experiments</h2>
@@ -1080,7 +1080,7 @@
 <p>A very attractive aspect of stochastic simulation is the ability to perform numerical experiments. However, the topic of random processes over networks has been studied a lot on the theoretical side as well. A few selected references include :</p>
 <ul>
 <li>
-<p><a href="https://www.nas.ewi.tudelft.nl/people/Piet/papers/IEEEToN_virusspread.pdf" target="_blank" rel="noopener">Virus Spreads in Networks</a> by Van Mieghem et al., which formalizes the definition of epidemic as a Markov process on the configuration space,</p>
+<p><a href="https://www.nas.ewi.tudelft.nl/people/Piet/papers/IEEEToN_virusspread.pdf" target="_blank" rel="noopener">Virus Spreads in Networks</a> by Van Mieghem et al., which formalises the definition of epidemic as a Markov process on the configuration space,</p>
 </li>
 <li>
 <p><a href="https://people.maths.bris.ac.uk/~maajg/infocom-worm.pdf" target="_blank" rel="noopener">The Effect of Network Topology on the Spread of Epidemics</a> by Massoulié et al., which exhibits a phase transition between short-lived and long-lived epidemics in terms of the transition rates and the adjacency spectral radius of the network,</p>
