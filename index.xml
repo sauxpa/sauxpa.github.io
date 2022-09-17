@@ -150,7 +150,7 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
 $$
 X_t = \sum_{s=1}^t \xi_s
 $$
-be the cumulative loss process.&lt;/p&gt;
+be the cumulative loss process. The more $X_t$ increases, the more losses the gambler suffers.&lt;/p&gt;
 &lt;p&gt;Note that the i.i.d assumption does not exactly hold: once a ticket is bought and scratched, it is removed from the pool of available tickets and cannot be acquired again, i.e. the true sampling is &lt;em&gt;without replacement&lt;/em&gt;. We will see later that this only has a limited impact on the final result, which is quite intuitive: if you draw only a few samples, say a few dozens at most, with replacement, it is quite unlikely that you would sample twice the same among the $N=4,500,000$.&lt;/p&gt;
 &lt;p&gt;Our problem of &amp;ldquo;flight time&amp;rdquo; corresponds to studying the following random time:
 $$
@@ -192,7 +192,7 @@ $$&lt;/p&gt;
 $$
 -\frac{\partial}{\partial \beta} \mathbb{E}[e^{-\beta \tau_{\alpha}}]\bigg|_{\beta=0} = \mathbb{E}[\tau_{\alpha}] = \frac{\alpha}{\mu} \,.
 $$&lt;/p&gt;
-&lt;p&gt;After all these calculations, let&amp;rsquo;s take a step back to reflect on what this result means. On average, a gambler reaches the critical threshold $\alpha=2$ after $\frac{\alpha}{\mu}=\frac{2}{0.63}\approx 3.17$ rounds. This is, perhaps quite surprisingly, very intuitive: if you start from €2 and loose on average $63$ cents each time you play, it should take you a bit more than 3 rounds to consume your initial €2. The above shows that this back-of-the-envelope calculation is exact in the continuous time Gaussian case. Moreover, this result is independent of the variance $\sigma^2$.&lt;/p&gt;
+&lt;p&gt;After all these calculations, let&amp;rsquo;s take a step back to reflect on what this result means. On average, a gambler reaches the critical threshold $\alpha=2$ after $\frac{\alpha}{\mu}=\frac{2}{0.63}\approx 3.17$ rounds. This is, perhaps quite surprisingly, very intuitive: if you start from €2 and loose on average 63 cents each time you play, it should take you a bit more than 3 rounds to consume your initial €2. The above shows that this back-of-the-envelope calculation is exact in the continuous time Gaussian case. Moreover, this result is independent of the variance $\sigma^2$.&lt;/p&gt;
 &lt;h3 id=&#34;nice-does-this-mean-that-i-can-play-thrice-at-the-cost-of-a-single-ticket-most-of-the-time&#34;&gt;Nice! Does this mean that I can play thrice at the cost of a single ticket most of the time?&lt;/h3&gt;
 &lt;p&gt;Not at all! It is important to make the distinction here between &lt;em&gt;mean&lt;/em&gt; and &lt;em&gt;median&lt;/em&gt; flight times. Intuitively, the distribution of flight time $\tau_{\alpha}$ should be quite asymmetrical around its mean: events where large gains are made early (e.g. first ticket yields €100) will result in very large flight times but remain quite rare, while events of &amp;ldquo;early crashes&amp;rdquo; (the few tickets are loosers) are much more frequent. Therefore, the median flight time, i.e. the majority of flight times are below it, should be less than the mean flight time, which is driven upwards by the &amp;ldquo;early luck&amp;rdquo; outliers. This type of distribution is called *right-skewed*.&lt;/p&gt;
 &lt;h3 id=&#34;flight-time-distribution-in-the-gaussian-case&#34;&gt;Flight time distribution in the Gaussian case&lt;/h3&gt;
