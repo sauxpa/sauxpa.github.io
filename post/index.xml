@@ -13,6 +13,45 @@
     </image>
     
     <item>
+      <title>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [2]</title>
+      <link>https://sauxpa.github.io/post/astro_2/</link>
+      <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://sauxpa.github.io/post/astro_2/</guid>
+      <description>&lt;h2 id=&#34;assessing-the-quality-of-the-gaussian-approximation&#34;&gt;Assessing the quality of the Gaussian approximation&lt;/h2&gt;
+&lt;p&gt;In the previous post, we have calculated the distribution of the flight time of the cumulative Gaussian loss process $Z_t=\mu t + \sigma W_t$, that is $\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, Z_t \geq \alpha \right\rbrace$. In the game of Astro though, the loss distribution for scratching a card is far from being Gaussian: it is discrete, asymmetrical, with pronounced skewness towards small losses. The figure below shows the difference between the true Astro distribution (in green) and its Gaussian approximation $\mathcal{N}(\mu, \sigma^2)$ (in blue), with $\mu=0.63$ and $\sigma=20.67$.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /post/astro_2/astro_vs_gaussian_distributions_hu72c0f51c5aa2e2c6c44f0c4e9b7d19e8_25858_7947c7dfcc6c3ac0105073d8031c3722.png 400w,
+               /post/astro_2/astro_vs_gaussian_distributions_hu72c0f51c5aa2e2c6c44f0c4e9b7d19e8_25858_a6c83265bff505e2f4d821c3c29f1986.png 760w,
+               /post/astro_2/astro_vs_gaussian_distributions_hu72c0f51c5aa2e2c6c44f0c4e9b7d19e8_25858_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/astro_2/astro_vs_gaussian_distributions_hu72c0f51c5aa2e2c6c44f0c4e9b7d19e8_25858_7947c7dfcc6c3ac0105073d8031c3722.png&#34;
+               width=&#34;760&#34;
+               height=&#34;339&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h3 id=&#34;tbc&#34;&gt;TBC&lt;/h3&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2022-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [1]</title>
       <link>https://sauxpa.github.io/post/astro_1/</link>
       <pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate>
