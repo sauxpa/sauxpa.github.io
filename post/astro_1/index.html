@@ -1,0 +1,1344 @@
+<!DOCTYPE html><html lang="en-uk" >
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.0.0-beta.3 for Hugo" />
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Patrick Saux" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Some vacation fun on gambling and martingales." />
+
+  
+  <link rel="alternate" hreflang="en-uk" href="https://sauxpa.github.io/post/astro_1/" />
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    <meta name="theme-color" content="#795548" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.d9706dc53855a542de7b58e966a697fb.css" />
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/index.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://sauxpa.github.io/post/astro_1/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+  <meta property="og:site_name" content="Patrick Saux" />
+  <meta property="og:url" content="https://sauxpa.github.io/post/astro_1/" />
+  <meta property="og:title" content="Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [1] | Patrick Saux" />
+  <meta property="og:description" content="Some vacation fun on gambling and martingales." /><meta property="og:image" content="https://sauxpa.github.io/post/astro_1/featured.png" />
+    <meta property="twitter:image" content="https://sauxpa.github.io/post/astro_1/featured.png" /><meta property="og:locale" content="en-uk" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2022-09-17T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2022-09-17T15:25:28&#43;02:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://sauxpa.github.io/post/astro_1/"
+  },
+  "headline": "Gambler's ruin in Astro and the accuracy of Gaussian approximation [1]",
+  
+  "image": [
+    "https://sauxpa.github.io/post/astro_1/featured.png"
+  ],
+  
+  "datePublished": "2022-09-17T00:00:00Z",
+  "dateModified": "2022-09-17T15:25:28+02:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Patrick Saux"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Patrick Saux",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://sauxpa.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Some vacation fun on gambling and martingales."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [1] | Patrick Saux</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="b8cd8ae4f0af888c1a51d650d3bdba07" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.7dc5be8f76e9e1722f142f56fa9d5308.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Patrick Saux</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Patrick Saux</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/research/"><span>Research</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/teaching/"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/projects/"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/talks/"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/post/"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [1]</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span >
+      Patrick Saux</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Sep 17, 2022
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i></span>
+  
+
+</div>
+
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 394px; max-height: 573px;">
+  <div style="position: relative">
+    <img src="/post/astro_1/featured.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Recently, I was on a holiday trip with a friend, let&rsquo;s call him Nathan. While not exactly a gambling addict, Nathan likes to buy scratchcards every now and then. One of his favourites is called Astro; most newspapers shops in France sell them for €2 a piece, and there exists 12 different versions, one for each astrological sign. While the sign itself does not affect the odds (at least I don&rsquo;t believe so), it is a brilliant marketing strategy as it encourages you to buy a few more tickets and distribute them to your friends born under a different star than yours. Nathan is a Sagittarius, and that day he acquired a set of tickets, including an extra Aquarius one that he gifted to me. As it turned out, all but one of the set were loosers, the Aquarius one being the sole winner of a modest €6. Emboldened by this unexpected luck, I exchanged my gains for three more tickets to distribute among friends, keeping one Aquarius for myself. Again, all loosers but mine. This time I cashed out and stopped the gambling streak, much to Nathan&rsquo;s dismay. I admit this is not a particularly exciting vacation story, but it got me thinking: what if I did not cashed out? How long could I have last by just reinvesting my gains, flying off Nathan&rsquo;s initial €2 ticket?</p>
+<h2 id="the-astro-distribution">The Astro distribution</h2>
+<p>Astro is a fairly transparent game: whoever takes the time to read the back of a ticket can learn all there is to know about the odds and possible profits. On mine, it read that 4,500,000 tickets were issued, among which 661,500 are winners for €2, 476,000 for €4, 150,000 for €6, 101,350 for €10, 45,000 for €20, 415 for €17T00, 8 for €1,000 and finally 3 extra lucky ones for €25,000. The figure below shows this gain distribution, with probabilities displayed in logarithmic scale for readability.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="" srcset="
+               /post/astro_1/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_3bf1b5b37b9a4f48414549a538a0b505.png 400w,
+               /post/astro_1/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_be83f8c7892889a7459bd64738a3cb47.png 760w,
+               /post/astro_1/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/astro_1/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_3bf1b5b37b9a4f48414549a538a0b505.png"
+               width="495"
+               height="352"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>The expected gain of a ticket chosen uniformly at random (which I assume is how tickets are assigned to vendors) can be easily calculated from the above information and reads $\mathbb{E}[gain] = \sum_{x} x\mathbb{P}(gain=x) = 1.37$. After substracting the €2 cost of a ticket, the expected net payoff of a single Astro ticket is then $-0.63$. This makes perfect sense: the company that issues these tickets makes 63 cents on each, i.e about €2.3m in total.</p>
+<p>In addition, we can also compute the variance with the formula $\sigma^2 = \mathbb{E}[gain^2] - \mathbb{E}[gain]^2$, which gives $\sigma\approx 20.67$.</p>
+<h2 id="flight-time">Flight time</h2>
+<p>Going back to our initial question: how long can we defy the odds and keep &ldquo;flying&rdquo; from only the initial investment of €2? Let&rsquo;s introduce some notations. We denote by $\left( g_t \right)_{t\in\mathbb{N}}$ a sequence of i.i.d samples drawn from the Astro distribution and let $\xi_t = 2 - g_t$ be the corresponding net <em>loss</em>, including the ticket price, and
+$$
+X_t = \sum_{s=1}^t \xi_s
+$$
+be the cumulative loss process. The more $X_t$ increases, the more losses the gambler suffers.</p>
+<p>Note that the i.i.d assumption does not exactly hold: once a ticket is bought and scratched, it is removed from the pool of available tickets and cannot be acquired again, i.e. the true sampling is <em>without replacement</em>. We will see later that this only has a limited impact on the final result, which is quite intuitive: if you draw only a few samples, say a few dozens at most, with replacement, it is quite unlikely that you would sample twice the same among the $N=4,500,000$.</p>
+<p>Our problem of &ldquo;flight time&rdquo; corresponds to studying the following random time:
+$$
+\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, X_t \geq \alpha \right\rbrace,
+$$
+which is a stopping time with respect to the natural filtration $\left(\mathcal{F}_t\right)_{t\in\mathbb{N}}$ induced by the process $X$, i.e. $\mathcal{F}_t=\sigma\left( X_s, 0\leq s\leq t\right)$. Indeed, reaching the threshold $\alpha=2$ for the cumulative loss $X_t$ is equivalent to reaching €0 wealth for a gambler who starts at €2 and keeps scratching Astro at every round, which we informally defined as the &ldquo;flight time&rdquo; above.</p>
+<h2 id="the-gaussian-case">The Gaussian case</h2>
+<p>The reader versed in martingales will almost surely recognise this problem as an instance of gambler&rsquo;s ruin. Indeed, the distribution of $\tau_{\alpha}$ can be fully explicited when the increments $\xi$ are Gaussian. For completeness, we derive below this standard result using stochastic calculus.</p>
+<p>For convenience, we consider the continuous time setting, i.e. $t\in\mathbb{R}_+$ instead of $t\in\mathbb{N}$ and define the process $Z$ as
+\begin{align*}
+&amp;dZ_t = \mu dt + \sigma dW_t\,,\\<br>
+&amp;Z_0=0\,,
+\end{align*}
+where $\mu=0.63$, $\sigma=20.67$ and $W$ is a standard Brownian motion with respect to the filtration $\mathcal{F}$. Intuitively, we retrieve the discrete time model by the correspondence $dt\approx 1$ and $dW_t \approx \xi_t$. The loss process $Z$ can be more directly expressed as
+$$
+Z_t = \mu t + \sigma W_t\,,
+$$
+and the flight time in this context naturally becomes $\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, Z_t \geq \alpha \right\rbrace$.</p>
+<p>Studying a stopping time can be quite hard, and coupling it with the right martingale is often the easiest approach. For $\lambda\in\mathbb{R}$, we define
+$$
+M^\lambda_t = \exp\left( \lambda W_t - \frac{\lambda^2}{2}t\right)\,.
+$$
+It is a standard result that $M^\lambda$ defines a $\mathcal{F}$-martingale. Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. Note that $t\mapsto X_t$ is (almost-surely) continuous (since $t\mapsto W_t$ is), and therefore $Z_{\tau_{\alpha}}=\alpha$. Doob&rsquo;s optional stopping theorem yields that the stopped martingale $\left(M^\lambda_{t \wedge \tau_{\alpha}}\right)_{t\in\mathbb{N}}$ is also a $\mathcal{F}$-martingale, and thus in particular
+$$
+\mathbb{E}[M^\lambda_{t \wedge \tau_{\alpha}}] = \mathbb{E}[M^\lambda_0] = 1\,.
+$$
+It is now tempting to consider the limit $t\rightarrow +\infty$ to obtain $\mathbb{E}[M^\lambda_{\tau_{\alpha}}]=\mathbb{E}[e^{\frac{\lambda \alpha}{\sigma} - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})\tau_{\alpha}}]=1$. This is justified since
+$$
+\lvert M^\lambda_{t\wedge \tau_{\alpha}} \rvert \leq e^{\frac{\lambda}{\sigma} \max(Z_{t\wedge \tau_{\alpha}}, 0) } \leq e^{\frac{\lambda \alpha}{\sigma}}\,,
+$$
+which allows to apply the dominated convergence theorem. Rearranging termes, we obtain the identity
+$$
+\mathbb{E}[e^{-(\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})\tau_{\alpha}}] = e^{-\frac{\lambda \alpha}{\sigma}}\,.
+$$
+This is almost the Laplace transform of $\tau_{\alpha}$, which we define for $\beta&gt;0$ as $\mathbb{E}[e^{-\beta \tau_{\alpha}}]$. Since $\tau_{\alpha}$ is nonnegative, this Laplace transform fully characterises its distribution. Solving $\beta = \frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma}$ in terms of $\lambda$ yields $\lambda=-\frac{\mu}{\sigma} + \sqrt{\frac{\mu^2}{\sigma^2} + 2\beta}$ for $\lambda\geq 0$, i.e.
+$$
+\mathbb{E}[e^{-\beta \tau_{\alpha}}] = e^{\frac{\alpha \mu}{\sigma^2}\left(1 - \sqrt{1 + \frac{2\sigma^2 \beta}{\mu^2}}\right)} \,.
+$$</p>
+<p>Besides characterising the distribution, the Laplace transform is also useful to compute the moments. Indeed, by differentiating w.r.t. $\beta$, we have that
+$$
+-\frac{\partial}{\partial \beta} \mathbb{E}[e^{-\beta \tau_{\alpha}}]\bigg|_{\beta=0} = \mathbb{E}[\tau_{\alpha}] = \frac{\alpha}{\mu} \,.
+$$</p>
+<p>After all these calculations, let&rsquo;s take a step back to reflect on what this result means. On average, a gambler reaches the critical threshold $\alpha=2$ after $\frac{\alpha}{\mu}=\frac{2}{0.63}\approx 3.17$ rounds. This is, perhaps quite surprisingly, very intuitive: if you start from €2 and loose on average 63 cents each time you play, it should take you a bit more than 3 rounds to consume your initial €2. The above shows that this back-of-the-envelope calculation is exact in the continuous time Gaussian case. Moreover, this result is independent of the variance $\sigma^2$.</p>
+<h3 id="nice-does-this-mean-that-i-can-play-thrice-at-the-cost-of-a-single-ticket-most-of-the-time">Nice! Does this mean that I can play thrice at the cost of a single ticket most of the time?</h3>
+<p>Not at all! It is important to make the distinction here between <em>mean</em> and <em>median</em> flight times. Intuitively, the distribution of flight time $\tau_{\alpha}$ should be quite asymmetrical around its mean: events where large gains are made early (e.g. first ticket yields €100) will result in very large flight times but remain quite rare, while events of &ldquo;early crashes&rdquo; (the few tickets are loosers) are much more frequent. Therefore, the median flight time, i.e. the majority of flight times are below it, should be less than the mean flight time, which is driven upwards by the &ldquo;early luck&rdquo; outliers. This type of distribution is called *right-skewed*.</p>
+<h3 id="flight-time-distribution-in-the-gaussian-case">Flight time distribution in the Gaussian case</h3>
+<p>The expression of the Laplace transform $\mathbb{E}[e^{-\beta \tau_{\alpha}}]$ reveals that $\tau_{\alpha}$ follows an Inverse Gaussian distribution $IG\left(\frac{\alpha}{\mu}, \frac{\alpha^2}{\sigma^2}\right)$, the density of which is given by:
+$$
+p_{\tau_{\alpha}}(t) = \sqrt{\frac{\alpha^2}{2\pi \sigma^2 t^3}} \exp\left(-\frac{\left(\mu t - \alpha\right)^2}{2\sigma^2 t} \right)\,.
+$$</p>
+<p>We plot below this density for the Astro parameters ($\mu=0.63, \sigma=20.67, \alpha=2$), as well as the mean, the median, and the 5th, 25th, 75th and 95th percentiles. This distribution appears to be significantly right-skewed: even the 95th percentile is below the mean ($2.14$ versus $3.17$). In other words, according to the Gaussian approximation, it is really unlikely (less than 5% chance) that your flight time will be above 2 rounds, even though the mean flight time is above 3!</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="" srcset="
+               /post/astro_1/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_5a997e563d0d77c5a5b9b39911a90a13.png 400w,
+               /post/astro_1/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_4c8dea43f45b46326e8c0bb308024ad1.png 760w,
+               /post/astro_1/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/astro_1/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_5a997e563d0d77c5a5b9b39911a90a13.png"
+               width="637"
+               height="352"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>Next time, we will talk about the flight time for the true Astro distribution, rather than under the Gaussian approximation. Closed-form expression of $\tau_{\alpha}$ are not available in this case, so simulations will prove handy.</p>
+<h2 id="license">License</h2>
+<p>Copyright 2022-present <a href="https://sauxpa.github.io/" target="_blank" rel="noopener">Patrick Saux</a>.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://sauxpa.github.io/post/astro_1/&amp;text=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[1]" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://sauxpa.github.io/post/astro_1/&amp;t=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[1]" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[1]&amp;body=https://sauxpa.github.io/post/astro_1/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://sauxpa.github.io/post/astro_1/&amp;title=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[1]" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[1]%20https://sauxpa.github.io/post/astro_1/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://sauxpa.github.io/post/astro_1/&amp;title=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[1]" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/astro_2/">Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [2]</a></li>
+      
+      <li><a href="/post/markov_epidemic/">Markov Epidemic, a stochastic model for disease outbreak</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/latex.min.js"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    <script src="/js/bootstrap.bundle.min.6aed84840afc03ab4d5750157f69c120.js"></script>
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.584d94c9f7b603dd098d1d9ca46f2ce9.js"></script>
+
+    
+
+
+
+
+
+
+</body>
+</html>

@@ -13,10 +13,10 @@
     </image>
     
     <item>
-      <title>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation</title>
-      <link>https://sauxpa.github.io/post/astro/</link>
+      <title>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [1]</title>
+      <link>https://sauxpa.github.io/post/astro_1/</link>
       <pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>https://sauxpa.github.io/post/astro/</guid>
+      <guid>https://sauxpa.github.io/post/astro_1/</guid>
       <description>&lt;p&gt;Recently, I was on a holiday trip with a friend, let&amp;rsquo;s call him Nathan. While not exactly a gambling addict, Nathan likes to buy scratchcards every now and then. One of his favourites is called Astro; most newspapers shops in France sell them for €2 a piece, and there exists 12 different versions, one for each astrological sign. While the sign itself does not affect the odds (at least I don&amp;rsquo;t believe so), it is a brilliant marketing strategy as it encourages you to buy a few more tickets and distribute them to your friends born under a different star than yours. Nathan is a Sagittarius, and that day he acquired a set of tickets, including an extra Aquarius one that he gifted to me. As it turned out, all but one of the set were loosers, the Aquarius one being the sole winner of a modest €6. Emboldened by this unexpected luck, I exchanged my gains for three more tickets to distribute among friends, keeping one Aquarius for myself. Again, all loosers but mine. This time I cashed out and stopped the gambling streak, much to Nathan&amp;rsquo;s dismay. I admit this is not a particularly exciting vacation story, but it got me thinking: what if I did not cashed out? How long could I have last by just reinvesting my gains, flying off Nathan&amp;rsquo;s initial €2 ticket?&lt;/p&gt;
 &lt;h2 id=&#34;the-astro-distribution&#34;&gt;The Astro distribution&lt;/h2&gt;
 &lt;p&gt;Astro is a fairly transparent game: whoever takes the time to read the back of a ticket can learn all there is to know about the odds and possible profits. On mine, it read that 4,500,000 tickets were issued, among which 661,500 are winners for €2, 476,000 for €4, 150,000 for €6, 101,350 for €10, 45,000 for €20, 415 for €17T00, 8 for €1,000 and finally 3 extra lucky ones for €25,000. The figure below shows this gain distribution, with probabilities displayed in logarithmic scale for readability.&lt;/p&gt;
@@ -38,10 +38,10 @@
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
-               /post/astro/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_3bf1b5b37b9a4f48414549a538a0b505.png 400w,
-               /post/astro/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_be83f8c7892889a7459bd64738a3cb47.png 760w,
-               /post/astro/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://sauxpa.github.io/post/astro/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_3bf1b5b37b9a4f48414549a538a0b505.png&#34;
+               /post/astro_1/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_3bf1b5b37b9a4f48414549a538a0b505.png 400w,
+               /post/astro_1/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_be83f8c7892889a7459bd64738a3cb47.png 760w,
+               /post/astro_1/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/astro_1/astro_distribution_hu57851b484c8509d333975b3cb0092681_18067_3bf1b5b37b9a4f48414549a538a0b505.png&#34;
                width=&#34;495&#34;
                height=&#34;352&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
@@ -69,8 +69,9 @@ which is a stopping time with respect to the natural filtration $\left(\mathcal{
 \end{align*}
 where $\mu=0.63$, $\sigma=20.67$ and $W$ is a standard Brownian motion with respect to the filtration $\mathcal{F}$. Intuitively, we retrieve the discrete time model by the correspondence $dt\approx 1$ and $dW_t \approx \xi_t$. The loss process $Z$ can be more directly expressed as
 $$
-Z_t = \mu t + \sigma W_t\,.
-$$&lt;/p&gt;
+Z_t = \mu t + \sigma W_t\,,
+$$
+and the flight time in this context naturally becomes $\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, Z_t \geq \alpha \right\rbrace$.&lt;/p&gt;
 &lt;p&gt;Studying a stopping time can be quite hard, and coupling it with the right martingale is often the easiest approach. For $\lambda\in\mathbb{R}$, we define
 $$
 M^\lambda_t = \exp\left( \lambda W_t - \frac{\lambda^2}{2}t\right)\,.
@@ -122,15 +123,55 @@ $$&lt;/p&gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
     &lt;div class=&#34;w-100&#34; &gt;
         &lt;img alt=&#34;&#34; srcset=&#34;
-               /post/astro/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_5a997e563d0d77c5a5b9b39911a90a13.png 400w,
-               /post/astro/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_4c8dea43f45b46326e8c0bb308024ad1.png 760w,
-               /post/astro/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://sauxpa.github.io/post/astro/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_5a997e563d0d77c5a5b9b39911a90a13.png&#34;
+               /post/astro_1/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_5a997e563d0d77c5a5b9b39911a90a13.png 400w,
+               /post/astro_1/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_4c8dea43f45b46326e8c0bb308024ad1.png 760w,
+               /post/astro_1/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/astro_1/ig_distribution_hu56001d7e0d4d1c290b9b1bb2329c0aed_35248_5a997e563d0d77c5a5b9b39911a90a13.png&#34;
                width=&#34;637&#34;
                height=&#34;352&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;tbc&#34;&gt;TBC&lt;/h2&gt;
+&lt;h2 id=&#34;whats-next&#34;&gt;What&amp;rsquo;s next?&lt;/h2&gt;
+&lt;p&gt;Next time, we will talk about the flight time for the true Astro distribution, rather than under the Gaussian approximation. Closed-form expression of $\tau_{\alpha}$ are not available in this case, so simulations will prove handy.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2022-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [2]</title>
+      <link>https://sauxpa.github.io/post/astro_2/</link>
+      <pubDate>Sat, 17 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://sauxpa.github.io/post/astro_2/</guid>
+      <description>&lt;h2 id=&#34;assessing-the-quality-of-the-gaussian-approximation&#34;&gt;Assessing the quality of the Gaussian approximation&lt;/h2&gt;
+&lt;p&gt;In the previous post, we have calculated the distribution of the flight time of the cumulative Gaussian loss process $Z_t=\mu t + \sigma W_t$, that is $\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, Z_t \geq \alpha \right\rbrace$. In the game of Astro though, the loss distribution for scratching a card is far from being Gaussian: it is discrete, asymmetrical, with pronounced skewness towards small losses. The figure below shows the difference between the true Astro distribution (in green) and its Gaussian approximation $\mathcal{N}(\mu, \sigma^2)$ (in blue), with $\mu=0.63$ and $\sigma=$&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /post/astro_2/astro_vs_gaussian_distributions_hu784e2b336dd120e660d8cd5d55f1da69_28206_b17770fb13e447d776298f766eb32e5e.png 400w,
+               /post/astro_2/astro_vs_gaussian_distributions_hu784e2b336dd120e660d8cd5d55f1da69_28206_57e34b5991410d1a36b3a742cccca0fa.png 760w,
+               /post/astro_2/astro_vs_gaussian_distributions_hu784e2b336dd120e660d8cd5d55f1da69_28206_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/astro_2/astro_vs_gaussian_distributions_hu784e2b336dd120e660d8cd5d55f1da69_28206_b17770fb13e447d776298f766eb32e5e.png&#34;
+               width=&#34;496&#34;
+               height=&#34;352&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;heading&#34;&gt;&lt;/h2&gt;
 &lt;p&gt;Next time, we&amp;rsquo;ll talk about the flight time for the true Astro distribution, rather than under the Gaussian approximation. Closed-form expression of $\tau_{\alpha}$ are not available in this case, so simulations will prove handy.&lt;/p&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;Copyright 2022-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;
