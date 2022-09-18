@@ -243,9 +243,9 @@ $$
 and the flight time in this context naturally becomes $\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, Z_t \geq \alpha \right\rbrace$.&lt;/p&gt;
 &lt;h3 id=&#34;of-martingales-and-stopping-times&#34;&gt;Of martingales and stopping times&lt;/h3&gt;
 &lt;p&gt;Studying a stopping time can be quite hard, and coupling it with the right martingale is often the easiest approach. We recall here some basics results on the interplay between martingales and stopping times. For convenience, we denote by $\mathcal{T}$ either $\mathbb{N}$ or $\mathbb{R}_+$ (the elementary results presented here are essentially unchanged by moving to the continuous time setting).&lt;/p&gt;
-&lt;p&gt;First, a process $\left(M_t\right)&lt;em&gt;{t\in\mathcal{T}}$ is a martingale with respect to a filtration $\left(\mathcal{F}_t\right)_{t\in\mathcal{T}}$ if for all $t\in\mathcal{T}$, $M_t$ is $\mathcal{F}_t$-adapted, integrable and satisfies the equality
+&lt;p&gt;First, a process $\left(M_t\right)_{t\in\mathcal{T}}$ is a martingale with respect to a filtration $\left(\mathcal{F}_t\right)_{t\in\mathcal{T}}$ if for all $t\in\mathcal{T}$, $M_t$ is $\mathcal{F}_t$-adapted, integrable and satisfies the equality
 $$
-\forall s\in\mathcal{T},\ \mathbb{E}\left[M&lt;/em&gt;{t+s}\mid \mathcal{F}_t\right] = M_t\,.
+\forall s\in\mathcal{T},\ \mathbb{E}\left[M_{t+s}\mid \mathcal{F}_t\right] = M_t\,.
 $$&lt;/p&gt;
 &lt;p&gt;Intuitively, this means a martingale represents a &lt;em&gt;fair&lt;/em&gt; game: it uses only information available at time $t$ ($\mathcal{F}_t$-adapted), and given this information, the estimation of future values of $M$ is exactly the current known value $M_t$ (this property is sometimes referred to as martingales being &amp;ldquo;constant in expectation&amp;rdquo;).&lt;/p&gt;
 &lt;p&gt;The crucial property of martingales for the study of stopping times is called Doob&amp;rsquo;s optional stopping theorem: for any $\mathcal{F}$-stopping time, the &lt;em&gt;stopped&lt;/em&gt; process $\left(M_{t\wedge \tau}\right)_{t\in\mathcal{T}}$ is also a $\mathcal{F}$-martingale, where $t\wedge \tau$ represents the minimum between $t$ and $\tau$. By taking the expectation of the above equality applied to the stopped martingale, we obtain the following identity:
