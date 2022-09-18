@@ -308,7 +308,7 @@
         content="2022-09-18T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-09-17T20:36:41&#43;02:00">
+    <meta property="article:modified_time" content="2022-09-18T11:09:23&#43;02:00">
   
 
   
@@ -341,7 +341,7 @@
   ],
   
   "datePublished": "2022-09-18T00:00:00Z",
-  "dateModified": "2022-09-17T20:36:41+02:00",
+  "dateModified": "2022-09-18T11:09:23+02:00",
   
   "author": {
     "@type": "Person",
@@ -808,7 +808,7 @@
           Last updated on
       
     
-    Sep 17, 2022
+    Sep 18, 2022
   </span>
   
 
@@ -817,7 +817,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    2 min read
   </span>
   
 
@@ -923,6 +923,39 @@
                height="339"
                loading="lazy" data-zoomable /></div>
   </div></figure>
+<p>It is insightful to look at the empirical estimation of $\mu$ and $\sigma$ under both the true Astro model and its Gaussian approximation. We define the standard (unbiased) sample estimators
+\begin{align*}
+&amp;\widehat{\mu}_t = \frac{1}{t}\sum_{s=1}^t X_s \,,\\<br>
+&amp;\widehat{\sigma}^2_t = \frac{1}{t-1}\sum_{s=1}^t \left(X_s - \widehat{\mu}_t\right)^2 \,,
+\end{align*}
+and report below the median (25th - 75th percentile in shaded area) of 10 independent replications of $\widehat{\mu}_t$ and $\widehat{\sigma}_t$ for $t$ ranging from 2 to 4,500,000, where $X$ is sampled from the Astro distribution (in green) and the Gaussian approximation (in blue).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="" srcset="
+               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hu48c76d7144f23a7a70cdf1ec96eeb32c_72010_6a18e5e0a70b63b0da5d5514244c8c85.png 400w,
+               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hu48c76d7144f23a7a70cdf1ec96eeb32c_72010_b6bbeab62b9c854210f10e081d20b302.png 760w,
+               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hu48c76d7144f23a7a70cdf1ec96eeb32c_72010_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hu48c76d7144f23a7a70cdf1ec96eeb32c_72010_6a18e5e0a70b63b0da5d5514244c8c85.png"
+               width="760"
+               height="268"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+<p>For the mean estimation, as expected, $\widehat{\mu}_t$ converges to the true expected value $\mu=0.63$, with higher dispersion in the Gaussian case. For the variance estimation, $\widehat{\sigma}_t$ seems to converge quite fast to the true value $\sigma=20.67$ in the Gaussian case, but remains much lower in the Astro model until $t\approx 10^5$, before suddenly jumping to values around $\widehat{\sigma}_t\approx 20$. This is actually quite intuitive: the high variance of the Astro distribution is driven by the outlier gains, in particular 1,000 and 25,000, which occur with very small probability. Before $t\approx 10^5$, the samples $X_1, \dots, X_t$ used in $\widehat{\sigma}_t$ do not contain such outliers, thus estimating a seemingly low variance. In other words, the sample variance in the Astro model is subject to higher variability than in the Gaussian case, which hints at larger higher order moments (skewness, kurtosis&hellip;) in the Astro case.</p>
 <h3 id="tbc">TBC</h3>
 <h2 id="license">License</h2>
 <p>Copyright 2022-present <a href="https://sauxpa.github.io/" target="_blank" rel="noopener">Patrick Saux</a>.</p>
