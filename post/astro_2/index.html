@@ -308,7 +308,7 @@
         content="2022-09-18T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-09-19T10:19:02&#43;02:00">
+    <meta property="article:modified_time" content="2022-09-19T10:26:24&#43;02:00">
   
 
   
@@ -341,7 +341,7 @@
   ],
   
   "datePublished": "2022-09-18T00:00:00Z",
-  "dateModified": "2022-09-19T10:19:02+02:00",
+  "dateModified": "2022-09-19T10:26:24+02:00",
   
   "author": {
     "@type": "Person",
@@ -957,8 +957,8 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
   </div></figure>
 <p>For the mean estimation, as expected, $\widehat{\mu}_t$ converges to the true expected value $\mu=0.63$, with higher dispersion in the Gaussian case. For the variance estimation, $\widehat{\sigma}_t$ seems to converge quite fast to the true value $\sigma=20.67$ in the Gaussian case, but remains much lower in the Astro model until $t\approx 10^5$, before suddenly jumping to values around $\widehat{\sigma}_t\approx 20$. This is actually quite intuitive: the high variance of the Astro distribution is driven by the outlier gains, in particular 1,000 and 25,000, which occur with very small probability. Before $t\approx 10^5$, the samples $X_1, \dots, X_t$ used in $\widehat{\sigma}_t$ do not contain such outliers, thus estimating a seemingly low variance. In other words, the sample variance in the Astro model is subject to higher variability than in the Gaussian case, which hints at larger higher order moments (skewness, kurtosis&hellip;) in the Astro case. We confirm this intuition with a direct calculation, based on the formulae:</p>
 <p>\begin{align*}
-&amp;skewness = \frac{\sum_{x} (x - \mu)^3\mathbb{P}(gain=x)}{\sigma^{\frac{3}{2}}}\,,\\<br>
-&amp;kurtosis = \frac{\sum_{x} (x - \mu)^4\mathbb{P}(gain=x)}{\sigma^{2}} - 3\,.
+&amp;skewness = \frac{\mathbb{E}\left[\left(X-\mu\right)^3\right]}{\sigma^{\frac{3}{2}}}\,,\\<br>
+&amp;kurtosis = \frac{\mathbb{E}\left[\left(X-\mu\right)^4\right]}{\sigma^{2}} - 3\,.
 \end{align*}</p>
 <table>
 <thead>
