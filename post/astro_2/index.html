@@ -308,7 +308,7 @@
         content="2022-09-18T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-09-18T11:09:23&#43;02:00">
+    <meta property="article:modified_time" content="2022-09-19T10:11:35&#43;02:00">
   
 
   
@@ -341,7 +341,7 @@
   ],
   
   "datePublished": "2022-09-18T00:00:00Z",
-  "dateModified": "2022-09-18T11:09:23+02:00",
+  "dateModified": "2022-09-19T10:11:35+02:00",
   
   "author": {
     "@type": "Person",
@@ -808,7 +808,7 @@
           Last updated on
       
     
-    Sep 18, 2022
+    Sep 19, 2022
   </span>
   
 
@@ -956,6 +956,33 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
                loading="lazy" data-zoomable /></div>
   </div></figure>
 <p>For the mean estimation, as expected, $\widehat{\mu}_t$ converges to the true expected value $\mu=0.63$, with higher dispersion in the Gaussian case. For the variance estimation, $\widehat{\sigma}_t$ seems to converge quite fast to the true value $\sigma=20.67$ in the Gaussian case, but remains much lower in the Astro model until $t\approx 10^5$, before suddenly jumping to values around $\widehat{\sigma}_t\approx 20$. This is actually quite intuitive: the high variance of the Astro distribution is driven by the outlier gains, in particular 1,000 and 25,000, which occur with very small probability. Before $t\approx 10^5$, the samples $X_1, \dots, X_t$ used in $\widehat{\sigma}_t$ do not contain such outliers, thus estimating a seemingly low variance. In other words, the sample variance in the Astro model is subject to higher variability than in the Gaussian case, which hints at larger higher order moments (skewness, kurtosis&hellip;) in the Astro case.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>$\mu$</th>
+<th>$\sigma$</th>
+<th>skewness</th>
+<th>kurtosis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Astro</td>
+<td>0.63</td>
+<td>20.67</td>
+<td>-1180</td>
+<td>1426342</td>
+</tr>
+<tr>
+<td>Gaussian</td>
+<td>0.63</td>
+<td>20.67</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 <h3 id="tbc">TBC</h3>
 <h2 id="license">License</h2>
 <p>Copyright 2022-present <a href="https://sauxpa.github.io/" target="_blank" rel="noopener">Patrick Saux</a>.</p>
