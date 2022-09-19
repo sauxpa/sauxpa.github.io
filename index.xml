@@ -115,7 +115,7 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
       <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
       <guid>https://sauxpa.github.io/post/astro_2/</guid>
       <description>&lt;h2 id=&#34;assessing-the-quality-of-the-gaussian-approximation&#34;&gt;Assessing the quality of the Gaussian approximation&lt;/h2&gt;
-&lt;p&gt;In the previous post, we have calculated the distribution of the flight time of the cumulative Gaussian loss process $Z_t=\mu t + \sigma W_t$, that is $\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, Z_t \geq \alpha \right\rbrace$. In the game of Astro though, the loss distribution for scratching a card is far from being Gaussian: it is discrete, asymmetrical, with pronounced skewness towards small losses. The figure below shows the difference between the true Astro distribution (in green) and its Gaussian approximation $\mathcal{N}(\mu, \sigma^2)$ (in blue), with $\mu=0.63$ and $\sigma=20.67$.&lt;/p&gt;
+&lt;p&gt;In the previous post, we have calculated the distribution of the flight time of the cumulative Gaussian loss process $Z_t=\mu t + \sigma W_t$, that is $\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, Z_t \geq \alpha \right\rbrace$. In the game of Astro though, the loss distribution for scratching a card is far from Gaussian: it is discrete, asymmetrical, with pronounced skewness towards small losses. The figure below shows the difference between the true Astro distribution (in green) and its Gaussian approximation $\mathcal{N}(\mu, \sigma^2)$ (in blue), with $\mu=0.63$ and $\sigma=20.67$.&lt;/p&gt;
 
 
 
@@ -272,9 +272,63 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;The expectation of $\tau_{\alpha}$ is surprisingly well estimated in the inverse Gaussian model (3.17 versus 3.20 $\pm$ 0.01). This is not totally surprising: remember the expectation of $IG\left(\frac{\alpha}{\mu}, \frac{\alpha^2}{\sigma^2}\right)$ is $\frac{\alpha}{\mu}$, which depends only on the threshold $\alpha$ and the expectation $\mu$ of the Astro random walk, &lt;em&gt;not&lt;/em&gt; on higher moments which are crucially underestimated by the Gaussian approximation. On the contrary, quantiles are poorly estimated by the Gaussian model, partly because of the continuous time (quantiles in the discrete time Astro model cannot be less than 1, whereas the inverse Gaussian distribution puts a lot of mass on $[0, 1]$).&lt;/p&gt;
-&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;The inverse Gaussian approximation based on continuous time martingale argument offers an analytical expression that tracks quite accurately the expected flight time of scratching Astro cards. In a sense, this is an empirical manifestation of the ubiquitous property that Gaussian distributions are limits of distributions with finite variance (central limit theorem, Donsker&amp;rsquo;s theorem on rnadom walks&amp;hellip;). This sort of approximation is numerically consistent in expectation. but much less so for other statistics, e.g. the quantiles. We leave as an open problem whether this can be studied more formally (e.g. in a similar spirit to Glivenko-Cantolli classes). Moreover, let&amp;rsquo;s emphasise again the difference in interpretation between mean and median: the expected flight time $\mathbb{E}\left[\tau_{\alpha}\right]\approx 3.20$ is driven upwards by unlikely events of large magnitude; the most likely outcome of scratching Astra cards is to loose 2€ all at once!&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;The inverse Gaussian approximation based on continuous time martingale arguments offers an analytical expression that tracks quite accurately the expected flight time of scratching Astro cards. In a sense, this is an empirical manifestation of the ubiquitous property that Gaussian distributions are limits of distributions with finite variance (central limit theorem, Donsker&amp;rsquo;s theorem on rnadom walks&amp;hellip;). This sort of approximation is numerically consistent in expectation. but much less so for other statistics, e.g. the quantiles. We leave as an open problem whether this can be studied more formally (e.g. in a similar spirit to Glivenko-Cantolli classes). Moreover, let&amp;rsquo;s emphasise again the difference in interpretation between mean and median: the expected flight time $\mathbb{E}\left[\tau_{\alpha}\right]\approx 3.20$ is driven upwards by unlikely events of large magnitude; the most likely outcome of scratching Astra cards is to loose 2€ all at once!&lt;/p&gt;
 &lt;p&gt;Finally, you may check out the code used for the simulation and figures in this &lt;a href=&#34;https://github.com/sauxpa/astro&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;repo&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;bonus&#34;&gt;Bonus&lt;/h2&gt;
+&lt;p&gt;In this first post, we mentioned a subtlety of the sampling mechanism in Astro: bought tickets are effectively removed from the pool of available tickets, and therefore sampling from the Astro distribution should be done without replacement. Intuitively though, this should be negligible since the typical flight time is much smaller than the total amount of tickets (4,500,00). To convince ourselves, we report below figures on mean and variance estimation as well as the distribution of flight time under sampling without replcament and visually verify that they are similar to their counterparts with replacement.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /post/astro_2/mu_sigma_astro_nr_vs_gaussian_distributions_hubffa187233cffa206f1dccea7fc6819d_90300_1e474d5bb1441cc5c6d71ae7c9174fcb.png 400w,
+               /post/astro_2/mu_sigma_astro_nr_vs_gaussian_distributions_hubffa187233cffa206f1dccea7fc6819d_90300_4b4f99c17fea06e30f82fd4994692b56.png 760w,
+               /post/astro_2/mu_sigma_astro_nr_vs_gaussian_distributions_hubffa187233cffa206f1dccea7fc6819d_90300_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/astro_2/mu_sigma_astro_nr_vs_gaussian_distributions_hubffa187233cffa206f1dccea7fc6819d_90300_1e474d5bb1441cc5c6d71ae7c9174fcb.png&#34;
+               width=&#34;496&#34;
+               height=&#34;712&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /post/astro_2/astro_nr_vs_gaussian_flight_time_distributions_hudfd307929da19b9b32cac73cce6199e6_29446_93cbdc9d6f75da628da6f0744fe323ff.png 400w,
+               /post/astro_2/astro_nr_vs_gaussian_flight_time_distributions_hudfd307929da19b9b32cac73cce6199e6_29446_d264fe087a62b2c835893434bd37a64c.png 760w,
+               /post/astro_2/astro_nr_vs_gaussian_flight_time_distributions_hudfd307929da19b9b32cac73cce6199e6_29446_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/astro_2/astro_nr_vs_gaussian_flight_time_distributions_hudfd307929da19b9b32cac73cce6199e6_29446_93cbdc9d6f75da628da6f0744fe323ff.png&#34;
+               width=&#34;496&#34;
+               height=&#34;352&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;Cheers!&lt;/p&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;Copyright 2022-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;
