@@ -179,33 +179,12 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
 &amp;amp;skewness = \frac{\mathbb{E}\left[\left(X-\mu\right)^3\right]}{\sigma^{\frac{3}{2}}}\,,\\&lt;br&gt;
 &amp;amp;kurtosis = \frac{\mathbb{E}\left[\left(X-\mu\right)^4\right]}{\sigma^{2}} - 3\,.
 \end{align*}&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;$\mu$&lt;/th&gt;
-&lt;th&gt;$\sigma$&lt;/th&gt;
-&lt;th&gt;skewness&lt;/th&gt;
-&lt;th&gt;kurtosis&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Astro&lt;/td&gt;
-&lt;td&gt;0.63&lt;/td&gt;
-&lt;td&gt;20.67&lt;/td&gt;
-&lt;td&gt;-1180&lt;/td&gt;
-&lt;td&gt;1426486&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Gaussian&lt;/td&gt;
-&lt;td&gt;0.63&lt;/td&gt;
-&lt;td&gt;20.67&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;center&gt;
+|          | $\mu$ | $\sigma$ | skewness | kurtosis |
+|----------|-------|----------|----------|----------|
+| Astro    | 0.63  | 20.67    | -1180    | 1426486  |
+| Gaussian | 0.63  | 20.67    | 0        | 0        |
+&lt;/center&gt;
 &lt;h3 id=&#34;tbc&#34;&gt;TBC&lt;/h3&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;Copyright 2022-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;
