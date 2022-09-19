@@ -308,7 +308,7 @@
         content="2022-09-18T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-09-19T12:04:25&#43;02:00">
+    <meta property="article:modified_time" content="2022-09-19T12:29:06&#43;02:00">
   
 
   
@@ -341,7 +341,7 @@
   ],
   
   "datePublished": "2022-09-18T00:00:00Z",
-  "dateModified": "2022-09-19T12:04:25+02:00",
+  "dateModified": "2022-09-19T12:29:06+02:00",
   
   "author": {
     "@type": "Person",
@@ -1007,14 +1007,51 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
   <div class="d-flex justify-content-center">
     <div class="w-100" >
         <img alt="" srcset="
-               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_7f100c963af55597f6ebb0424bae2f7b.png 400w,
-               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_4b40610c5bc501f394a067e51d28a63d.png 760w,
-               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_1200x1200_fit_lanczos_3.png 1200w"
-               src="/post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_7f100c963af55597f6ebb0424bae2f7b.png"
+               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hu7a3a15ba6dace7201dd4329569ad7e76_26354_ae283f78c9470905ef8d476be901d24c.png 400w,
+               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hu7a3a15ba6dace7201dd4329569ad7e76_26354_453a1166625d2185a56f7ab14bb84d34.png 760w,
+               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hu7a3a15ba6dace7201dd4329569ad7e76_26354_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/astro_2/astro_vs_gaussian_flight_time_distributions_hu7a3a15ba6dace7201dd4329569ad7e76_26354_ae283f78c9470905ef8d476be901d24c.png"
                width="496"
                height="352"
                loading="lazy" data-zoomable /></div>
   </div></figure>
+<p>The simulation reveals that the inverse Gaussian approximation underestimates the probability of small flight times and overestimates that of longer ($&gt;100$) flight times. In other words, the inverse Gaussian approximation is too optimisitc and does not account properly for the high risk of early crash. We report mean, standard deviation and percentiles of $\tau_{\alpha}$ under both the simulated Astro and the inverse Gaussian models (confidence intervals for the simulated statistics are calculated by bootsrap with 1,000 independent replications).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>$\mu$</th>
+<th>$\sigma$</th>
+<th>5th</th>
+<th>25th</th>
+<th>50th</th>
+<th>75th</th>
+<th>95th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Astro (simulated)</td>
+<td>3.20 [3.19 ; 3.21]</td>
+<td>60.8 [56.9 ; 64.1]</td>
+<td>1.0 [1.0 ; 1.0]</td>
+<td>1.0 [1.0 ; 1.0]</td>
+<td>1.0 [1.0 ; 1.0]</td>
+<td>2.0 [2.0 ; 2.0]</td>
+<td>11.0 [11.0 ; 11.0]</td>
+</tr>
+<tr>
+<td>IG approxmation</td>
+<td>3.17</td>
+<td>20.67</td>
+<td>0.00</td>
+<td>0.01</td>
+<td>0.02</td>
+<td>0.09</td>
+<td>2.14</td>
+</tr>
+</tbody>
+</table>
 <h3 id="tbc">TBC</h3>
 <h2 id="license">License</h2>
 <p>Copyright 2022-present <a href="https://sauxpa.github.io/" target="_blank" rel="noopener">Patrick Saux</a>.</p>
