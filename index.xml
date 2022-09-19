@@ -206,6 +206,34 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h2 id=&#34;simulated-flight-time&#34;&gt;Simulated flight time&lt;/h2&gt;
+&lt;p&gt;Contrary to the continuous time Gaussian case, computing $\tau_{\alpha}$ for the true Astro distrubtion is not possible in closed-form using similar martingale arguments as in the first post. However, it is straightforward to simulate random walks following the Astro distribution and therefore to estimate $\tau_{\alpha}$ by the Monte Carlo method. The result of 100 millions independent replications are reported below against the inverse Gaussian distribution coming from the Gaussian approximation model.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;
+        &lt;img alt=&#34;&#34; srcset=&#34;
+               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_7f100c963af55597f6ebb0424bae2f7b.png 400w,
+               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_4b40610c5bc501f394a067e51d28a63d.png 760w,
+               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://sauxpa.github.io/post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_7f100c963af55597f6ebb0424bae2f7b.png&#34;
+               width=&#34;496&#34;
+               height=&#34;352&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
 &lt;h3 id=&#34;tbc&#34;&gt;TBC&lt;/h3&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;Copyright 2022-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;

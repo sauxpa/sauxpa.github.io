@@ -308,7 +308,7 @@
         content="2022-09-18T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-09-19T11:17:16&#43;02:00">
+    <meta property="article:modified_time" content="2022-09-19T12:04:25&#43;02:00">
   
 
   
@@ -341,7 +341,7 @@
   ],
   
   "datePublished": "2022-09-18T00:00:00Z",
-  "dateModified": "2022-09-19T11:17:16+02:00",
+  "dateModified": "2022-09-19T12:04:25+02:00",
   
   "author": {
     "@type": "Person",
@@ -817,7 +817,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -987,6 +987,34 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
 </tr>
 </tbody>
 </table>
+<h2 id="simulated-flight-time">Simulated flight time</h2>
+<p>Contrary to the continuous time Gaussian case, computing $\tau_{\alpha}$ for the true Astro distrubtion is not possible in closed-form using similar martingale arguments as in the first post. However, it is straightforward to simulate random walks following the Astro distribution and therefore to estimate $\tau_{\alpha}$ by the Monte Carlo method. The result of 100 millions independent replications are reported below against the inverse Gaussian distribution coming from the Gaussian approximation model.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" >
+        <img alt="" srcset="
+               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_7f100c963af55597f6ebb0424bae2f7b.png 400w,
+               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_4b40610c5bc501f394a067e51d28a63d.png 760w,
+               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/astro_2/astro_vs_gaussian_flight_time_distributions_hudac40755cc772b3132958b260fff3157_29551_7f100c963af55597f6ebb0424bae2f7b.png"
+               width="496"
+               height="352"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
 <h3 id="tbc">TBC</h3>
 <h2 id="license">License</h2>
 <p>Copyright 2022-present <a href="https://sauxpa.github.io/" target="_blank" rel="noopener">Patrick Saux</a>.</p>
