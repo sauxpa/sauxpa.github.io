@@ -174,7 +174,8 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;tbc&#34;&gt;TBC&lt;/h3&gt;
+&lt;p&gt;The expectation of $\tau_{\alpha}$ is surprisingly well estimated in the inverse Gaussian model (3.17 versus 3.20 [3.19 ; 3.21]). This is not totally surprising: remember the expectation of $IG\left(\frac{\alpha}{\mu}, \frac{\alpha^2}{\sigma^2}\right)$ is $\frac{\alpha}{\mu}$, which depends only on the threshold $\alpha$ and the expectation $\mu$ of the Astro random walk, *not* on higher moments which are crucially underestimated by the Gaussian approximation.&lt;/p&gt;
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;Copyright 2022-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;
 </description>
