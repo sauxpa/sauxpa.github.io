@@ -234,7 +234,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
                height=&#34;352&#34;
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
-&lt;p&gt;The simulation reveals that the inverse Gaussian approximation underestimates the probability of small flight times and overestimates that of longer ($&amp;gt;100$) flight times. In other words, the inverse Gaussian approximation is too optimisitc and does not account properly for the high risk of early crash. We report mean, standard deviation and percentiles of $\tau_{\alpha}$ under both the simulated Astro and the inverse Gaussian models (confidence intervals for the simulated statistics are calculated by bootsrap with 1,000 independent replications).&lt;/p&gt;
+&lt;p&gt;The simulation reveals that the inverse Gaussian approximation underestimates the probability of small flight times and overestimates that of longer ($&amp;gt;100$) flight times. In other words, the inverse Gaussian approximation is too optimisitc and does not account properly for the high risk of early crash. We report mean, standard deviation and percentiles of $\tau_{\alpha}$ under both the simulated Astro and the inverse Gaussian models (confidence intervals for the simulated statistics are calculated by bootstrap with 1,000 independent replications).&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -251,7 +251,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Astro (simulated)&lt;/td&gt;
-&lt;td&gt;3.20 [3.19 ; 3.21]&lt;/td&gt;
+&lt;td&gt;3.20 \n[3.19 ; 3.21]&lt;/td&gt;
 &lt;td&gt;60.8 [56.9 ; 64.1]&lt;/td&gt;
 &lt;td&gt;1.0 [1.0 ; 1.0]&lt;/td&gt;
 &lt;td&gt;1.0 [1.0 ; 1.0]&lt;/td&gt;
@@ -260,7 +260,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
 &lt;td&gt;11.0 [11.0 ; 11.0]&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;IG approxmation&lt;/td&gt;
+&lt;td&gt;IG approximation&lt;/td&gt;
 &lt;td&gt;3.17&lt;/td&gt;
 &lt;td&gt;20.67&lt;/td&gt;
 &lt;td&gt;0.00&lt;/td&gt;
@@ -425,7 +425,7 @@ $$&lt;/p&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;IG approxmation&lt;/td&gt;
+&lt;td&gt;IG approximation&lt;/td&gt;
 &lt;td&gt;0.63&lt;/td&gt;
 &lt;td&gt;20.67&lt;/td&gt;
 &lt;td&gt;0.00&lt;/td&gt;
