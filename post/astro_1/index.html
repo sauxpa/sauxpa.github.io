@@ -308,7 +308,7 @@
         content="2022-09-17T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-09-19T09:54:36&#43;02:00">
+    <meta property="article:modified_time" content="2022-09-19T09:58:03&#43;02:00">
   
 
   
@@ -341,7 +341,7 @@
   ],
   
   "datePublished": "2022-09-17T00:00:00Z",
-  "dateModified": "2022-09-19T09:54:36+02:00",
+  "dateModified": "2022-09-19T09:58:03+02:00",
   
   "author": {
     "@type": "Person",
@@ -956,7 +956,7 @@ and the flight time in this context naturally becomes $\tau_{\alpha} = \inf \lef
 $$
 \forall s\in\mathcal{T},\ \mathbb{E}\left[M_{t+s}\mid \mathcal{F}_t\right] = M_t\,.
 $$</p>
-<p>Intuitively, this means a martingale represents a <em>fair</em> game: if $M_t$ represents a fictitious amount of wealth for the player at time $t$, then $M_t$ is fully known from the information available at time $t$ ($\mathcal{F}<em>t$-adapted) and the estimation of future wealth is exactly $M_t$ (by contrast, a loosing game would satisfy $\mathbb{E}\left[M</em>{t+s}\mid \mathcal{F}_t\right] \leq M_t$; such processes are calleds supermartingales). This property is sometimes referred to as martingales being &ldquo;constant in expectation&rdquo;.</p>
+<p>Intuitively, this means a martingale represents a <em>fair</em> game: if $M_t$ represents a fictitious amount of wealth for the player at time $t$, then $M_t$ is fully known from the information available at time $t$ ($\mathcal{F}_t$-adapted) and the estimation of future wealth is exactly $M_t$ (by contrast, a loosing game would satisfy $\mathbb{E}\left[M_{t+s}\mid \mathcal{F}_t\right] \leq M_t$; such processes are called supermartingales). This property is sometimes referred to as martingales being &ldquo;constant in expectation&rdquo;.</p>
 <p>The crucial property of martingales for the study of stopping times is called Doob&rsquo;s optional stopping theorem: for any $\mathcal{F}$-stopping time, the <em>stopped</em> process $\left(M_{t\wedge \tau}\right)_{t\in\mathcal{T}}$ is also a $\mathcal{F}$-martingale, where $t\wedge \tau$ represents the minimum between $t$ and $\tau$. By taking the expectation of the above equality applied to the stopped martingale, we obtain the following identity:
 $$
 \forall t\in\mathcal{T},\ \mathbb{E}\left[M_{t\wedge \tau}\right] = \mathbb{E}\left[M_0\right]\,.
