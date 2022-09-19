@@ -947,12 +947,12 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
   <div class="d-flex justify-content-center">
     <div class="w-100" >
         <img alt="" srcset="
-               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hu48c76d7144f23a7a70cdf1ec96eeb32c_72010_6a18e5e0a70b63b0da5d5514244c8c85.png 400w,
-               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hu48c76d7144f23a7a70cdf1ec96eeb32c_72010_b6bbeab62b9c854210f10e081d20b302.png 760w,
-               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hu48c76d7144f23a7a70cdf1ec96eeb32c_72010_1200x1200_fit_lanczos_3.png 1200w"
-               src="/post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hu48c76d7144f23a7a70cdf1ec96eeb32c_72010_6a18e5e0a70b63b0da5d5514244c8c85.png"
-               width="760"
-               height="268"
+               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hubeb908b7006fc2257a7621c266e289b1_79434_d70fa162b0026c6d9f7e7fe36cf9d868.png 400w,
+               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hubeb908b7006fc2257a7621c266e289b1_79434_8add3d03d48a04eb9acb971018d12892.png 760w,
+               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hubeb908b7006fc2257a7621c266e289b1_79434_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hubeb908b7006fc2257a7621c266e289b1_79434_d70fa162b0026c6d9f7e7fe36cf9d868.png"
+               width="496"
+               height="712"
                loading="lazy" data-zoomable /></div>
   </div></figure>
 <p>For the mean estimation, as expected, $\widehat{\mu}_t$ converges to the true expected value $\mu=0.63$, with higher dispersion in the Gaussian case. For the variance estimation, $\widehat{\sigma}_t$ seems to converge quite fast to the true value $\sigma=20.67$ in the Gaussian case, but remains much lower in the Astro model until $t\approx 10^5$, before suddenly jumping to values around $\widehat{\sigma}_t\approx 20$. This is actually quite intuitive: the high variance of the Astro distribution is driven by the outlier gains, in particular 1,000 and 25,000, which occur with very small probability. Before $t\approx 10^5$, the samples $X_1, \dots, X_t$ used in $\widehat{\sigma}_t$ do not contain such outliers, thus estimating a seemingly low variance. In other words, the sample variance in the Astro model is subject to higher variability than in the Gaussian case, which hints at larger higher order moments (skewness, kurtosis&hellip;) in the Astro case. We confirm this intuition with a direct calculation, based on the formulae:</p>
