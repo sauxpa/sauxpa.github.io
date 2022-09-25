@@ -308,7 +308,7 @@
         content="2022-09-17T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-09-19T12:32:33&#43;02:00">
+    <meta property="article:modified_time" content="2022-09-25T11:48:30&#43;02:00">
   
 
   
@@ -341,7 +341,7 @@
   ],
   
   "datePublished": "2022-09-17T00:00:00Z",
-  "dateModified": "2022-09-19T12:32:33+02:00",
+  "dateModified": "2022-09-25T11:48:30+02:00",
   
   "author": {
     "@type": "Person",
@@ -808,7 +808,7 @@
           Last updated on
       
     
-    Sep 19, 2022
+    Sep 25, 2022
   </span>
   
 
@@ -939,8 +939,8 @@ $$
 $$
 which is a stopping time with respect to the natural filtration $\left(\mathcal{F}_t\right)_{t\in\mathbb{N}}$ induced by the process $X$, i.e. $\mathcal{F}_t=\sigma\left( X_s, 0\leq s\leq t\right)$ (this means $\left\lbrace \tau_{\alpha} \geq t\right\rbrace$ is an event in $\mathcal{F}_t$ for all $t\in\mathbb{N}$, i.e. one knows from the information available at time $t$ whether or not the stopping event occured or not). Indeed, reaching the threshold $\alpha=2$ for the cumulative loss $X_t$ is equivalent to reaching €0 wealth for a gambler who starts at €2 and keeps scratching Astro at every round, which we informally defined as the &ldquo;flight time&rdquo; above.</p>
 <h2 id="the-gaussian-case">The Gaussian case</h2>
-<p>The reader versed in martingales will almost surely recognise this problem as an instance of gambler&rsquo;s ruin. Indeed, the distribution of $\tau_{\alpha}$ can be fully explicited when the increments $\xi$ are Gaussian. For completeness, we derive below this standard result using stochastic calculus.</p>
-<p>For convenience, we consider the continuous time setting, i.e. $t\in\mathbb{R}_+$ instead of $t\in\mathbb{N}$ and define the process $Z$ as
+<p>The reader versed in martingales will almost surely recognise this problem as an instance of gambler&rsquo;s ruin. Indeed, the distribution of $\tau_{\alpha}$ can be fully explicited when the increments $\xi$ are Gaussian, in the limit of continuous time $t\in\mathbb{R}_+$ (instead of $t\in\mathbb{N}$). For completeness, we derive below this standard result using stochastic calculus.</p>
+<p>We define the process $Z$ as
 \begin{align*}
 &amp;dZ_t = \mu dt + \sigma dW_t\,,\\<br>
 &amp;Z_0=0\,,
@@ -951,7 +951,7 @@ Z_t = \mu t + \sigma W_t\,,
 $$
 and the flight time in this context naturally becomes $\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, Z_t \geq \alpha \right\rbrace$.</p>
 <h3 id="of-martingales-and-stopping-times">Of martingales and stopping times</h3>
-<p>Studying a stopping time can be quite hard, and coupling it with the right martingale is often the easiest approach. We recall here some basics results on the interplay between martingales and stopping times. For convenience, we denote by $\mathcal{T}$ either $\mathbb{N}$ or $\mathbb{R}_+$ (the elementary results presented here are essentially unchanged by moving to the continuous time setting).</p>
+<p>Studying a stopping time can be quite hard, and coupling it with the right martingale is often the easiest approach. We recall here some elementary results on the interplay between martingales and stopping times. For convenience, we denote by $\mathcal{T}$ either $\mathbb{N}$ or $\mathbb{R}_+$ (the results presented below are essentially unchanged by moving to the continuous or discrete time setting).</p>
 <p>First, a process $\left(M_t\right)_{t\in\mathcal{T}}$ is a martingale with respect to a filtration $\left(\mathcal{F}_t\right)_{t\in\mathcal{T}}$ if for all $t\in\mathcal{T}$, $M_t$ is $\mathcal{F}_t$-adapted, integrable and satisfies the equality
 $$
 \forall s\in\mathcal{T},\ \mathbb{E}\left[M_{t+s}\mid \mathcal{F}_t\right] = M_t\,.
@@ -967,12 +967,12 @@ $$</p>
 $$
 M^\lambda_t = \exp\left( \lambda W_t - \frac{\lambda^2}{2}t\right)\,.
 $$
-It is a standard result in stochastic calculus that $M^\lambda$ defines a $\mathcal{F}$-martingale (it follows from the expression of the moment generating function on the standard Gaussian distribution coupled with the fact that the law of $W_t$ is $\mathcal{N}\left(0, t\right)$). Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. The reason why this is the &ldquo;right&rdquo; martingale will become apparent soon: it will help us compute exponential moments of $\tau_{\alpha}$, also known as the Laplace transform, which fully characterises its distribution.</p>
+It is a standard result in stochastic calculus that $M^\lambda$ defines a $\mathcal{F}$-martingale (it follows from the expression of the moment generating function of the standard Gaussian distribution coupled with the fact that the law of $W_t$ is $\mathcal{N}\left(0, t\right)$). Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. The reason why this is the &ldquo;right&rdquo; martingale will become apparent soon: it will help us compute exponential moments of $\tau_{\alpha}$, also known as the Laplace transform, which fully characterises its distribution.</p>
 <p>Note that $t\mapsto Z_t$ is (almost-surely) continuous (since $t\mapsto W_t$ is), and therefore $Z_{\tau_{\alpha}}=\alpha$ on the event $\left\lbrace \tau_{\alpha} &lt; \infty\right\rbrace$. As a consequence, it is straightforward to control $M^{\lambda}_{t\wedge \tau_{\alpha}}$ in the following way:
 $$
 \lvert M^\lambda_{t\wedge \tau_{\alpha}} \rvert \leq e^{\frac{\lambda}{\sigma} \max(Z_{t\wedge \tau_{\alpha}}, 0) } \leq e^{\frac{\lambda \alpha}{\sigma}}\,,
 $$
-which allows to use the dominated convergence theorem as discussed above. Thereofore, Doob&rsquo;s optional stopping theorem yields:
+which allows to use the dominated convergence theorem as discussed above. Therefore, Doob&rsquo;s optional stopping theorem yields:
 $$
 \mathbb{E}[M^\lambda_{\tau_{\alpha}}]=\mathbb{E}[e^{\frac{\lambda \alpha}{\sigma} - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})\tau_{\alpha}}]=1\,.
 $$

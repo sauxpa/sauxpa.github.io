@@ -110,6 +110,14 @@ Planning in MDP: Monte Carlo Tree Search.&lt;/p&gt;
     </item>
     
     <item>
+      <title>20 September 2022: Europen Workshop on Reinforcement Learning, Politecnico di Milano, IT</title>
+      <link>https://sauxpa.github.io/talks/ewrl_2022/</link>
+      <pubDate>Tue, 20 Sep 2022 10:00:00 +0000</pubDate>
+      <guid>https://sauxpa.github.io/talks/ewrl_2022/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Risk-aware linear bandits with convex loss</title>
       <link>https://sauxpa.github.io/research/risk_aware_linear_convex_loss/</link>
       <pubDate>Mon, 19 Sep 2022 00:00:00 +0000</pubDate>
@@ -354,6 +362,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
                loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;p&gt;Cheers!&lt;/p&gt;
+&lt;p&gt;P.S: kudos to &lt;a href=&#34;https://pierrebauvin.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pierre Bauvin&lt;/a&gt; for proofreading and for asking that I write it all down in the first place!&lt;/p&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;Copyright 2022-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -408,8 +417,8 @@ $$
 $$
 which is a stopping time with respect to the natural filtration $\left(\mathcal{F}_t\right)_{t\in\mathbb{N}}$ induced by the process $X$, i.e. $\mathcal{F}_t=\sigma\left( X_s, 0\leq s\leq t\right)$ (this means $\left\lbrace \tau_{\alpha} \geq t\right\rbrace$ is an event in $\mathcal{F}_t$ for all $t\in\mathbb{N}$, i.e. one knows from the information available at time $t$ whether or not the stopping event occured or not). Indeed, reaching the threshold $\alpha=2$ for the cumulative loss $X_t$ is equivalent to reaching €0 wealth for a gambler who starts at €2 and keeps scratching Astro at every round, which we informally defined as the &amp;ldquo;flight time&amp;rdquo; above.&lt;/p&gt;
 &lt;h2 id=&#34;the-gaussian-case&#34;&gt;The Gaussian case&lt;/h2&gt;
-&lt;p&gt;The reader versed in martingales will almost surely recognise this problem as an instance of gambler&amp;rsquo;s ruin. Indeed, the distribution of $\tau_{\alpha}$ can be fully explicited when the increments $\xi$ are Gaussian. For completeness, we derive below this standard result using stochastic calculus.&lt;/p&gt;
-&lt;p&gt;For convenience, we consider the continuous time setting, i.e. $t\in\mathbb{R}_+$ instead of $t\in\mathbb{N}$ and define the process $Z$ as
+&lt;p&gt;The reader versed in martingales will almost surely recognise this problem as an instance of gambler&amp;rsquo;s ruin. Indeed, the distribution of $\tau_{\alpha}$ can be fully explicited when the increments $\xi$ are Gaussian, in the limit of continuous time $t\in\mathbb{R}_+$ (instead of $t\in\mathbb{N}$). For completeness, we derive below this standard result using stochastic calculus.&lt;/p&gt;
+&lt;p&gt;We define the process $Z$ as
 \begin{align*}
 &amp;amp;dZ_t = \mu dt + \sigma dW_t\,,\\&lt;br&gt;
 &amp;amp;Z_0=0\,,
@@ -420,7 +429,7 @@ Z_t = \mu t + \sigma W_t\,,
 $$
 and the flight time in this context naturally becomes $\tau_{\alpha} = \inf \left\lbrace t\in\mathbb{N}, Z_t \geq \alpha \right\rbrace$.&lt;/p&gt;
 &lt;h3 id=&#34;of-martingales-and-stopping-times&#34;&gt;Of martingales and stopping times&lt;/h3&gt;
-&lt;p&gt;Studying a stopping time can be quite hard, and coupling it with the right martingale is often the easiest approach. We recall here some basics results on the interplay between martingales and stopping times. For convenience, we denote by $\mathcal{T}$ either $\mathbb{N}$ or $\mathbb{R}_+$ (the elementary results presented here are essentially unchanged by moving to the continuous time setting).&lt;/p&gt;
+&lt;p&gt;Studying a stopping time can be quite hard, and coupling it with the right martingale is often the easiest approach. We recall here some elementary results on the interplay between martingales and stopping times. For convenience, we denote by $\mathcal{T}$ either $\mathbb{N}$ or $\mathbb{R}_+$ (the results presented below are essentially unchanged by moving to the continuous or discrete time setting).&lt;/p&gt;
 &lt;p&gt;First, a process $\left(M_t\right)_{t\in\mathcal{T}}$ is a martingale with respect to a filtration $\left(\mathcal{F}_t\right)_{t\in\mathcal{T}}$ if for all $t\in\mathcal{T}$, $M_t$ is $\mathcal{F}_t$-adapted, integrable and satisfies the equality
 $$
 \forall s\in\mathcal{T},\ \mathbb{E}\left[M_{t+s}\mid \mathcal{F}_t\right] = M_t\,.
@@ -436,12 +445,12 @@ $$&lt;/p&gt;
 $$
 M^\lambda_t = \exp\left( \lambda W_t - \frac{\lambda^2}{2}t\right)\,.
 $$
-It is a standard result in stochastic calculus that $M^\lambda$ defines a $\mathcal{F}$-martingale (it follows from the expression of the moment generating function on the standard Gaussian distribution coupled with the fact that the law of $W_t$ is $\mathcal{N}\left(0, t\right)$). Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. The reason why this is the &amp;ldquo;right&amp;rdquo; martingale will become apparent soon: it will help us compute exponential moments of $\tau_{\alpha}$, also known as the Laplace transform, which fully characterises its distribution.&lt;/p&gt;
+It is a standard result in stochastic calculus that $M^\lambda$ defines a $\mathcal{F}$-martingale (it follows from the expression of the moment generating function of the standard Gaussian distribution coupled with the fact that the law of $W_t$ is $\mathcal{N}\left(0, t\right)$). Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. The reason why this is the &amp;ldquo;right&amp;rdquo; martingale will become apparent soon: it will help us compute exponential moments of $\tau_{\alpha}$, also known as the Laplace transform, which fully characterises its distribution.&lt;/p&gt;
 &lt;p&gt;Note that $t\mapsto Z_t$ is (almost-surely) continuous (since $t\mapsto W_t$ is), and therefore $Z_{\tau_{\alpha}}=\alpha$ on the event $\left\lbrace \tau_{\alpha} &amp;lt; \infty\right\rbrace$. As a consequence, it is straightforward to control $M^{\lambda}_{t\wedge \tau_{\alpha}}$ in the following way:
 $$
 \lvert M^\lambda_{t\wedge \tau_{\alpha}} \rvert \leq e^{\frac{\lambda}{\sigma} \max(Z_{t\wedge \tau_{\alpha}}, 0) } \leq e^{\frac{\lambda \alpha}{\sigma}}\,,
 $$
-which allows to use the dominated convergence theorem as discussed above. Thereofore, Doob&amp;rsquo;s optional stopping theorem yields:
+which allows to use the dominated convergence theorem as discussed above. Therefore, Doob&amp;rsquo;s optional stopping theorem yields:
 $$
 \mathbb{E}[M^\lambda_{\tau_{\alpha}}]=\mathbb{E}[e^{\frac{\lambda \alpha}{\sigma} - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})\tau_{\alpha}}]=1\,.
 $$
