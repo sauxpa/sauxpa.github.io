@@ -110,7 +110,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;simulated-flight-time&#34;&gt;Simulated flight time&lt;/h2&gt;
-&lt;p&gt;Contrary to the continuous time Gaussian case $\bar{\tau}_{\alpha}$, computing $\tau_{\alpha}=\inf\left\lbrace t\in\mathbb{N}, X_t \geq \alpha\right\rbrace$ for the true Astro distrubtion is not possible in closed-form using similar martingale arguments as in the first post. However, it is straightforward to simulate random walks following the Astro distribution and therefore to estimate $\tau_{\alpha}$ by the Monte Carlo method. The result of 100 millions independent replications are reported below against the inverse Gaussian distribution coming from the Gaussian approximation model.&lt;/p&gt;
+&lt;p&gt;Contrary to the continuous time Gaussian case $\bar{\tau}_{\alpha}$, computing $\tau_{\alpha}=\inf\left\lbrace t\in\mathbb{N}, X_t \geq \alpha\right\rbrace$ in closed-form for the true Astro distribution is a priori intricate. However, it is straightforward to simulate random walks following the Astro distribution and therefore to estimate $\tau_{\alpha}$ by the Monte Carlo method. The result of 100 millions independent replications are reported below against the inverse Gaussian distribution coming from the Gaussian approximation model.&lt;/p&gt;
 
 
 
