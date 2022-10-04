@@ -308,7 +308,7 @@
         content="2022-09-18T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-10-04T19:56:27&#43;02:00">
+    <meta property="article:modified_time" content="2022-10-04T20:04:26&#43;02:00">
   
 
   
@@ -341,7 +341,7 @@
   ],
   
   "datePublished": "2022-09-18T00:00:00Z",
-  "dateModified": "2022-10-04T19:56:27+02:00",
+  "dateModified": "2022-10-04T20:04:26+02:00",
   
   "author": {
     "@type": "Person",
@@ -896,7 +896,7 @@
 
     <div class="article-style">
       <h2 id="assessing-the-quality-of-the-gaussian-approximation">Assessing the quality of the Gaussian approximation</h2>
-<p>In the previous post, we have calculated the distribution of the flight time of the cumulative Gaussian loss process $Z_t=\mu t + \sigma W_t$, that is $\bar{\tau}<em>{\alpha} = \inf \left\lbrace t\in\mathbb{R}</em>+, Z_t \geq \alpha \right\rbrace$. In the game of Astro though, the loss distribution for scratching a card is far from Gaussian: it is discrete, asymmetrical, with pronounced skewness towards small losses. The figure below shows the difference between the true Astro distribution (in green) and its Gaussian approximation $\mathcal{N}(\mu, \sigma^2)$ (in blue), with $\mu=0.63$ and $\sigma=20.67$.</p>
+<p>In the previous post, we have calculated the distribution of the flight time of the cumulative Gaussian loss process $Z_t=\mu t + \sigma W_t$, that is $\bar{\tau}_{\alpha} = \inf \left\lbrace t\in\mathbb{R}_+, Z_t \geq \alpha \right\rbrace$. In the game of Astro though, the loss distribution for scratching a card is far from Gaussian: it is discrete, asymmetrical, with pronounced skewness towards small losses. The figure below shows the difference between the true Astro distribution (in green) and its Gaussian approximation $\mathcal{N}(\mu, \sigma^2)$ (in blue), with $\mu=0.63$ and $\sigma=20.67$.</p>
 
 
 
@@ -988,7 +988,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
 </tbody>
 </table>
 <h2 id="simulated-flight-time">Simulated flight time</h2>
-<p>Contrary to the continuous time Gaussian case $\bar{\tau}<em>{\alpha}$, computing $\tau</em>{\alpha}=\inf\left\lbrace t\in\mathbb{N}, X_t \geq \alpha\right\rbrace$ for the true Astro distrubtion is not possible in closed-form using similar martingale arguments as in the first post. However, it is straightforward to simulate random walks following the Astro distribution and therefore to estimate $\tau_{\alpha}$ by the Monte Carlo method. The result of 100 millions independent replications are reported below against the inverse Gaussian distribution coming from the Gaussian approximation model.</p>
+<p>Contrary to the continuous time Gaussian case $\bar{\tau}_{\alpha}$, computing $\tau_{\alpha}=\inf\left\lbrace t\in\mathbb{N}, X_t \geq \alpha\right\rbrace$ for the true Astro distrubtion is not possible in closed-form using similar martingale arguments as in the first post. However, it is straightforward to simulate random walks following the Astro distribution and therefore to estimate $\tau_{\alpha}$ by the Monte Carlo method. The result of 100 millions independent replications are reported below against the inverse Gaussian distribution coming from the Gaussian approximation model.</p>
 
 
 

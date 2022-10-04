@@ -147,7 +147,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
       <pubDate>Sun, 18 Sep 2022 00:00:00 +0000</pubDate>
       <guid>https://sauxpa.github.io/post/astro_2/</guid>
       <description>&lt;h2 id=&#34;assessing-the-quality-of-the-gaussian-approximation&#34;&gt;Assessing the quality of the Gaussian approximation&lt;/h2&gt;
-&lt;p&gt;In the previous post, we have calculated the distribution of the flight time of the cumulative Gaussian loss process $Z_t=\mu t + \sigma W_t$, that is $\bar{\tau}&lt;em&gt;{\alpha} = \inf \left\lbrace t\in\mathbb{R}&lt;/em&gt;+, Z_t \geq \alpha \right\rbrace$. In the game of Astro though, the loss distribution for scratching a card is far from Gaussian: it is discrete, asymmetrical, with pronounced skewness towards small losses. The figure below shows the difference between the true Astro distribution (in green) and its Gaussian approximation $\mathcal{N}(\mu, \sigma^2)$ (in blue), with $\mu=0.63$ and $\sigma=20.67$.&lt;/p&gt;
+&lt;p&gt;In the previous post, we have calculated the distribution of the flight time of the cumulative Gaussian loss process $Z_t=\mu t + \sigma W_t$, that is $\bar{\tau}_{\alpha} = \inf \left\lbrace t\in\mathbb{R}_+, Z_t \geq \alpha \right\rbrace$. In the game of Astro though, the loss distribution for scratching a card is far from Gaussian: it is discrete, asymmetrical, with pronounced skewness towards small losses. The figure below shows the difference between the true Astro distribution (in green) and its Gaussian approximation $\mathcal{N}(\mu, \sigma^2)$ (in blue), with $\mu=0.63$ and $\sigma=20.67$.&lt;/p&gt;
 
 
 
@@ -239,7 +239,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2 id=&#34;simulated-flight-time&#34;&gt;Simulated flight time&lt;/h2&gt;
-&lt;p&gt;Contrary to the continuous time Gaussian case $\bar{\tau}&lt;em&gt;{\alpha}$, computing $\tau&lt;/em&gt;{\alpha}=\inf\left\lbrace t\in\mathbb{N}, X_t \geq \alpha\right\rbrace$ for the true Astro distrubtion is not possible in closed-form using similar martingale arguments as in the first post. However, it is straightforward to simulate random walks following the Astro distribution and therefore to estimate $\tau_{\alpha}$ by the Monte Carlo method. The result of 100 millions independent replications are reported below against the inverse Gaussian distribution coming from the Gaussian approximation model.&lt;/p&gt;
+&lt;p&gt;Contrary to the continuous time Gaussian case $\bar{\tau}_{\alpha}$, computing $\tau_{\alpha}=\inf\left\lbrace t\in\mathbb{N}, X_t \geq \alpha\right\rbrace$ for the true Astro distrubtion is not possible in closed-form using similar martingale arguments as in the first post. However, it is straightforward to simulate random walks following the Astro distribution and therefore to estimate $\tau_{\alpha}$ by the Monte Carlo method. The result of 100 millions independent replications are reported below against the inverse Gaussian distribution coming from the Gaussian approximation model.&lt;/p&gt;
 
 
 
@@ -447,7 +447,7 @@ $$&lt;/p&gt;
 $$
 M^\lambda_t = \exp\left( \lambda W_t - \frac{\lambda^2}{2}t\right)\,.
 $$
-It is a standard result in stochastic calculus that $M^\lambda$ defines a $\mathcal{F}$-martingale (it follows from the expression of the moment generating function of the standard Gaussian distribution coupled with the fact that the law of $W_t$ is $\mathcal{N}\left(0, t\right)$). Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. The reason why this is the &amp;ldquo;right&amp;rdquo; martingale will become apparent soon: it will help us compute exponential moments of $\tau_{\alpha}$, also known as the Laplace transform, which fully characterises its distribution.&lt;/p&gt;
+It is a standard result in stochastic calculus that $M^\lambda$ defines a $\mathcal{F}$-martingale (it follows from the expression of the moment generating function of the standard Gaussian distribution coupled with the fact that the law of $W_t$ is $\mathcal{N}\left(0, t\right)$). Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. The reason why this is the &amp;ldquo;right&amp;rdquo; martingale will become apparent soon: it will help us compute exponential moments of $\bar{tau}_{\alpha}$, also known as the Laplace transform, which fully characterises its distribution.&lt;/p&gt;
 &lt;p&gt;Note that $t\mapsto Z_t$ is (almost-surely) continuous (since $t\mapsto W_t$ is), and therefore $Z_{\bar{\tau}_{\alpha}}=\alpha$ on the event $\left\lbrace \bar{\tau}_{\alpha} &amp;lt; \infty\right\rbrace$. As a consequence, it is straightforward to control $M^{\lambda}_{t\wedge \bar{\tau}_{\alpha}}$ in the following way:
 $$
 \lvert M^\lambda_{t\wedge \bar{\tau}_{\alpha}} \rvert \leq e^{\frac{\lambda}{\sigma} \max(Z_{t\wedge \bar{\tau}_{\alpha}}, 0) } \leq e^{\frac{\lambda \alpha}{\sigma}}\,,
@@ -466,13 +466,13 @@ $$
 $$&lt;/p&gt;
 &lt;p&gt;Besides characterising the distribution, the Laplace transform is also useful to compute the moments. Indeed, by differentiating w.r.t. $\beta$, we have that
 $$
--\frac{\partial}{\partial \beta} \mathbb{E}[e^{-\beta \bar{\tau}&lt;em&gt;{\alpha}}]\bigg|&lt;/em&gt;{\beta=0} = \mathbb{E}[\tau_{\alpha}] = \frac{\alpha}{\mu}\,.
+-\frac{\partial}{\partial \beta} \mathbb{E}[e^{-\beta \bar{\tau}_{\alpha}}]\bigg|_{\beta=0} = \mathbb{E}[\bar{\tau}_{\alpha}] = \frac{\alpha}{\mu}\,.
 $$&lt;/p&gt;
 &lt;p&gt;After all these calculations, let&amp;rsquo;s take a step back to reflect on what this result means. On average, a gambler reaches the critical threshold $\alpha=2$ after $\frac{\alpha}{\mu}=\frac{2}{0.63}\approx 3.17$ rounds. This is, perhaps quite surprisingly, very intuitive: if you start from €2 and loose on average $63$ cents each time you play, it should take you a bit more than 3 rounds to consume your initial €2. The above shows that this back-of-the-envelope calculation is exact in the continuous time Gaussian case. Moreover, this result is independent of the variance $\sigma^2$.&lt;/p&gt;
 &lt;h3 id=&#34;nice-does-this-mean-that-i-can-play-thrice-at-the-cost-of-a-single-ticket-most-of-the-time&#34;&gt;Nice! Does this mean that I can play thrice at the cost of a single ticket most of the time?&lt;/h3&gt;
 &lt;p&gt;Not at all! It is important to make the distinction here between &lt;em&gt;mean&lt;/em&gt; and &lt;em&gt;median&lt;/em&gt; flight times. Intuitively, the distribution of flight time $\bar{\tau}_{\alpha}$ should be quite asymmetrical around its mean: events where large gains are made early (e.g. first ticket yields €100) will result in very large flight times but remain quite rare, while events of &amp;ldquo;early crashes&amp;rdquo; (the first few tickets are loosers) are much more frequent. Therefore, the median flight time, i.e. the majority of flight times are below it, should be less than the mean flight time, which is driven upwards by the &amp;ldquo;early luck&amp;rdquo; outliers. This type of distribution is called &lt;em&gt;right-skewed&lt;/em&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;flight-time-distribution-in-the-gaussian-case&#34;&gt;Flight time distribution in the Gaussian case&lt;/h3&gt;
-&lt;p&gt;The expression of the Laplace transform $\mathbb{E}[e^{-\beta \bar{\tau}&lt;em&gt;{\alpha}}]$ reveals that $\bar{\tau}&lt;/em&gt;{\alpha}$ follows an Inverse Gaussian distribution $IG\left(\frac{\alpha}{\mu}, \frac{\alpha^2}{\sigma^2}\right)$, the density of which is given by:
+&lt;p&gt;The expression of the Laplace transform $\mathbb{E}[e^{-\beta \bar{\tau}_{\alpha}}]$ reveals that $\bar{\tau}_{\alpha}$ follows an Inverse Gaussian distribution $IG\left(\frac{\alpha}{\mu}, \frac{\alpha^2}{\sigma^2}\right)$, the density of which is given by:
 $$
 p_{\bar{\tau}_{\alpha}}(t) = \sqrt{\frac{\alpha^2}{2\pi \sigma^2 t^3}} \exp\left(-\frac{\left(\mu t - \alpha\right)^2}{2\sigma^2 t} \right)\,.
 $$&lt;/p&gt;
