@@ -567,8 +567,8 @@ p_{\bar{\tau}_{\alpha}}(t) = \sqrt{\frac{\alpha^2}{2\pi \sigma^2 t^3}} \exp\left
 $$
 Its mean and variance are given respectively by
 \begin{align*}
-\mathbb{E}\left[\bar{\tau}_{\alpha}\right]&amp;amp;= \frac{\alpha}{\mu}\,,\\&lt;br&gt;
-\mathbb{V}\left[\bar{\tau}_{\alpha}\right]&amp;amp;= \frac{\alpha \sigma^2}{\mu^3}\,.
+\mathbb{E}\left[\bar{\tau}_{\alpha}\right]&amp;amp;= \frac{\alpha}{\mu} \approx 3.17\,,\\&lt;br&gt;
+\mathbb{V}\left[\bar{\tau}_{\alpha}\right]&amp;amp;= \frac{\alpha \sigma^2}{\mu^3} \approx 58.46\,.
 \end{align*}&lt;/p&gt;
 &lt;p&gt;We plot below this density for the Astro parameters ($\mu=0.63, \sigma=20.67, \alpha=2$), as well as the mean, the median, and the 5th, 25th, 75th and 95th percentiles. This distribution appears to be significantly right-skewed: even the 95th percentile is below the mean ($2.14$ versus $3.17$). In other words, according to the Gaussian approximation, it is really unlikely (less than 5% chance) that your flight time will be above 2 rounds, even though the mean flight time is above 3!&lt;/p&gt;
 
@@ -601,8 +601,8 @@ Its mean and variance are given respectively by
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;&lt;/th&gt;
-&lt;th&gt;$\mu$&lt;/th&gt;
-&lt;th&gt;$\sigma$&lt;/th&gt;
+&lt;th&gt;mean&lt;/th&gt;
+&lt;th&gt;standard deviation&lt;/th&gt;
 &lt;th&gt;5th&lt;/th&gt;
 &lt;th&gt;25th&lt;/th&gt;
 &lt;th&gt;50th&lt;/th&gt;
@@ -613,8 +613,8 @@ Its mean and variance are given respectively by
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;IG approximation&lt;/td&gt;
-&lt;td&gt;0.63&lt;/td&gt;
-&lt;td&gt;20.67&lt;/td&gt;
+&lt;td&gt;3.17&lt;/td&gt;
+&lt;td&gt;58.46&lt;/td&gt;
 &lt;td&gt;0.00&lt;/td&gt;
 &lt;td&gt;0.01&lt;/td&gt;
 &lt;td&gt;0.02&lt;/td&gt;
