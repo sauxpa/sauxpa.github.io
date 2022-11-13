@@ -145,7 +145,7 @@ $$
 $$
 Then, for any $\lambda&amp;gt;0$, the process defined for $t\in\mathbb{N}$ by $M^\lambda_t = e^{X_t  - t\psi(\lambda)}$ is a martingale. Using the expression of the step size sequence, we have
 $$
-\psi(\lambda) = \lambda \Delta + \log\left(1 - \sum_{k\in\mathbb{N}}p_k\left(1 - e^{-(k+1)\Delta}\right)\right)\,.
+\psi(\lambda) = \lambda \Delta + \log\left(1 - \sum_{k\in\mathbb{N}}p_k\left(1 - e^{-\lambda (k+1)\Delta}\right)\right)\,.
 $$
 Moreover, $e^{\psi(\lambda)} = \mathbb{E}\left[e^{\lambda \xi}\right] \geq e^{\lambda \mu}$ by convexity and Jensen&amp;rsquo;s inequality, where
 $$
@@ -163,7 +163,7 @@ $$
 since $\psi(0)=0$.&lt;/p&gt;
 &lt;p&gt;The term $(\psi^{-1})&#39;(0)$ can be calculated using the inverse function rule, which yields $(\psi^{-1})&#39;(0)=\frac{1}{\psi&#39;(0)}$. A direct calculation shows that
 $$
-\psi&#39;(\lambda) = \Delta + \frac{-\Delta\sum_{k\in\mathbb{N}}(k+1)p_k e^{-(k+1) \Delta \lambda}}{1 - \sum_{k\in\mathbb{N}}p_k\left( 1 - e^{-(k+1)\Delta}\right)}\,,
+\psi&#39;(\lambda) = \Delta + \frac{-\Delta\sum_{k\in\mathbb{N}}(k+1)p_k e^{-\lambda (k+1) \Delta}}{1 - \sum_{k\in\mathbb{N}}p_k\left( 1 - e^{-\lambda (k+1) \Delta}\right)}\,,
 $$
 and thus $\psi&#39;(0) = \Delta\left(1 - \sum_{k\in\mathbb{N}}(k+1)p_k\right) = \mu$. Going back to the expected flight time, we have
 $$
@@ -185,11 +185,11 @@ $$
 \mathbb{V}\left[\tau_{\alpha}\right] = \frac{\alpha^+ \sigma^2}{\mu^3} \approx 58.46\,,
 $$
 where $\sigma\approx 20.67$ is the standard deviation of $\xi$. As it turns out, this is also exactly the formula provided by the inverse Gaussian distribution $IG\left(\frac{\alpha}{\mu}, \frac{\alpha^2}{\sigma^2}\right)$, i.e. $\mathbb{V}\left[\tau_{\alpha}\right] = \mathbb{V}\left[\bar{\tau}_{\alpha}\right]$!&lt;/p&gt;
-&lt;p&gt;A natural question is whether higher moments/cumulants are also well approximated by the inverse Gaussian distribution. Intuitively, this should not be the case since the Gaussian distribution used in this approximation only matches the first two moments of $\xi$, which is confirmed by the empirical analysis performed in the second post. We confirm this by an explicit calculation of the third cumulant of $\tau_{\alpha}$.&lt;/p&gt;
+&lt;p&gt;A natural question is whether higher moments/cumulants are also well approximated by the inverse Gaussian distribution. Intuitively, this should not be the case since the Gaussian distribution used in this approximation only matches the first two moments of $\xi$, which is also suggested by the empirical analysis performed in the second post. We confirm this by an explicit calculation of the third cumulant of $\tau_{\alpha}$.&lt;/p&gt;
 &lt;p&gt;Indeed, on the one hand, the third cumulant of the inverse Gaussian distribution is given by
 $$
 \bar{\kappa}_3 = \mathbb{E}\left[\left(\bar{\tau}_{\alpha}-\frac{\alpha}{\mu}\right)^3\right] = \frac{3\sigma^4\alpha}{\mu^5}\,.
-$$.
+$$
 On the other hand, yet another application of the inverse function rule shows that
 $$
 \left(\psi^{-1}\right)^{(3)}\left(\beta\right) = \frac{3\psi&#39;(\lambda)^2\psi&#39;&#39;(\lambda)^2 - \psi&#39;(\lambda)^3\psi^{(3)}(\lambda)}{\psi&#39;(\lambda)^7}\,,
@@ -198,7 +198,7 @@ and thus
 $$
 \kappa_3 = \frac{3\sigma^4\alpha^+}{\mu^5} - \frac{\psi^{(3)}(0)\alpha^+}{\mu^4} = \bar{\kappa}_3 - \frac{\psi^{(3)}(0)\alpha^+}{\mu^4}\,,
 $$
-where $\psi^{(3)}(0)=\mathbb{E}\left[\left(\xi-\mu\right)^3\right]$ is the third cumulant of $\xi$. In other words, negative skewness in the true Astro distribution translates into &lt;em&gt;higher&amp;lt;\em&amp;gt; skewness in the flight time distribution than the inverse Gaussian approximation suggests.&lt;/p&gt;
+where $\psi^{(3)}(0)=\mathbb{E}\left[\left(\xi-\mu\right)^3\right]$ is the third cumulant of $\xi$. In other words, negative skewness in the true Astro distribution translates into &lt;em&gt;higher&lt;/em&gt; skewness in the flight time distribution than the inverse Gaussian approximation suggests.&lt;/p&gt;
 &lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
 &lt;p&gt;Copyright 2022-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;
 </description>
@@ -282,7 +282,7 @@ Supplementary notes can be added here, including [code, math, and images](https:
 &amp;amp;\widehat{\mu}_t = \frac{1}{t}\sum_{s=1}^t \xi_s \,,\\&lt;br&gt;
 &amp;amp;\widehat{\sigma}^2_t = \frac{1}{t-1}\sum_{s=1}^t \left(\xi_s - \widehat{\mu}_t\right)^2 \,,
 \end{align*}
-and report below the median (25th - 75th percentile in shaded area) of 10 independent replications of $\widehat{\mu}_t$ and $\widehat{\sigma}_t$ for $t$ ranging from 2 to 4,500,000, where $X$ is sampled from the Astro distribution (in green) and the Gaussian approximation (in blue).&lt;/p&gt;
+and report below the median (25th - 75th percentile in shaded area) of 10 independent replications of $\widehat{\mu}_t$ and $\widehat{\sigma}_t$ for $t$ ranging from 2 to 4,500,000, where $\xi$ is sampled from the Astro distribution (in green) and the Gaussian approximation (in blue).&lt;/p&gt;
 
 
 
