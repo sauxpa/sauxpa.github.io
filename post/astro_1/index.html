@@ -308,7 +308,7 @@
         content="2022-09-17T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-10-04T20:04:26&#43;02:00">
+    <meta property="article:modified_time" content="2022-11-13T14:19:01&#43;01:00">
   
 
   
@@ -341,7 +341,7 @@
   ],
   
   "datePublished": "2022-09-17T00:00:00Z",
-  "dateModified": "2022-10-04T20:04:26+02:00",
+  "dateModified": "2022-11-13T14:19:01+01:00",
   
   "author": {
     "@type": "Person",
@@ -808,7 +808,7 @@
           Last updated on
       
     
-    Oct 4, 2022
+    Nov 13, 2022
   </span>
   
 
@@ -967,7 +967,7 @@ $$</p>
 $$
 M^\lambda_t = \exp\left( \lambda W_t - \frac{\lambda^2}{2}t\right)\,.
 $$
-It is a standard result in stochastic calculus that $M^\lambda$ defines a $\mathcal{F}$-martingale (it follows from the expression of the moment generating function of the standard Gaussian distribution coupled with the fact that the law of $W_t$ is $\mathcal{N}\left(0, t\right)$). Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. The reason why this is the &ldquo;right&rdquo; martingale will become apparent soon: it will help us compute exponential moments of $\bar{tau}_{\alpha}$, also known as the Laplace transform, which fully characterises its distribution.</p>
+It is a standard result in stochastic calculus that $M^\lambda$ defines a $\mathcal{F}$-martingale (it follows from the expression of the moment generating function of the standard Gaussian distribution coupled with the fact that the law of $W_t$ is $\mathcal{N}\left(0, t\right)$). Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. The reason why this is the &ldquo;right&rdquo; martingale will become apparent soon: it will help us compute exponential moments of $\bar{\tau}_{\alpha}$, also known as the Laplace transform, which fully characterises its distribution.</p>
 <p>Note that $t\mapsto Z_t$ is (almost-surely) continuous (since $t\mapsto W_t$ is), and therefore $Z_{\bar{\tau}_{\alpha}}=\alpha$ on the event $\left\lbrace \bar{\tau}_{\alpha} &lt; \infty\right\rbrace$. As a consequence, it is straightforward to control $M^{\lambda}_{t\wedge \bar{\tau}_{\alpha}}$ in the following way:
 $$
 \lvert M^\lambda_{t\wedge \bar{\tau}_{\alpha}} \rvert \leq e^{\frac{\lambda}{\sigma} \max(Z_{t\wedge \bar{\tau}_{\alpha}}, 0) } \leq e^{\frac{\lambda \alpha}{\sigma}}\,,
@@ -984,7 +984,7 @@ This is almost the Laplace transform of $\bar{\tau}_{\alpha}$, which we define f
 $$
 \mathbb{E}[e^{-\beta \bar{\tau}_{\alpha}}] = e^{\frac{\alpha \mu}{\sigma^2}\left(1 - \sqrt{1 + \frac{2\sigma^2 \beta}{\mu^2}}\right)} \,.
 $$</p>
-<p>Besides characterising the distribution, the Laplace transform is also useful to compute the moments. Indeed, by differentiating w.r.t. $\beta$, we have that
+<p>Besides characterising the distribution, the Laplace transform is also useful to compute the moments. Indeed, by differentiating w.r.t. $\beta$ (we differentiate inside the expectation since $e^{-\beta \bar{\tau}}\leq 1$ almost surely), we have that
 $$
 -\frac{\partial}{\partial \beta} \mathbb{E}[e^{-\beta \bar{\tau}_{\alpha}}]\bigg|_{\beta=0} = \mathbb{E}[\bar{\tau}_{\alpha}] = \frac{\alpha}{\mu}\,.
 $$</p>

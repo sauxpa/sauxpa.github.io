@@ -455,7 +455,7 @@ $$&lt;/p&gt;
 $$
 M^\lambda_t = \exp\left( \lambda W_t - \frac{\lambda^2}{2}t\right)\,.
 $$
-It is a standard result in stochastic calculus that $M^\lambda$ defines a $\mathcal{F}$-martingale (it follows from the expression of the moment generating function of the standard Gaussian distribution coupled with the fact that the law of $W_t$ is $\mathcal{N}\left(0, t\right)$). Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. The reason why this is the &amp;ldquo;right&amp;rdquo; martingale will become apparent soon: it will help us compute exponential moments of $\bar{tau}_{\alpha}$, also known as the Laplace transform, which fully characterises its distribution.&lt;/p&gt;
+It is a standard result in stochastic calculus that $M^\lambda$ defines a $\mathcal{F}$-martingale (it follows from the expression of the moment generating function of the standard Gaussian distribution coupled with the fact that the law of $W_t$ is $\mathcal{N}\left(0, t\right)$). Moreover, it can be rewritten as $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$. The reason why this is the &amp;ldquo;right&amp;rdquo; martingale will become apparent soon: it will help us compute exponential moments of $\bar{\tau}_{\alpha}$, also known as the Laplace transform, which fully characterises its distribution.&lt;/p&gt;
 &lt;p&gt;Note that $t\mapsto Z_t$ is (almost-surely) continuous (since $t\mapsto W_t$ is), and therefore $Z_{\bar{\tau}_{\alpha}}=\alpha$ on the event $\left\lbrace \bar{\tau}_{\alpha} &amp;lt; \infty\right\rbrace$. As a consequence, it is straightforward to control $M^{\lambda}_{t\wedge \bar{\tau}_{\alpha}}$ in the following way:
 $$
 \lvert M^\lambda_{t\wedge \bar{\tau}_{\alpha}} \rvert \leq e^{\frac{\lambda}{\sigma} \max(Z_{t\wedge \bar{\tau}_{\alpha}}, 0) } \leq e^{\frac{\lambda \alpha}{\sigma}}\,,
@@ -472,7 +472,7 @@ This is almost the Laplace transform of $\bar{\tau}_{\alpha}$, which we define f
 $$
 \mathbb{E}[e^{-\beta \bar{\tau}_{\alpha}}] = e^{\frac{\alpha \mu}{\sigma^2}\left(1 - \sqrt{1 + \frac{2\sigma^2 \beta}{\mu^2}}\right)} \,.
 $$&lt;/p&gt;
-&lt;p&gt;Besides characterising the distribution, the Laplace transform is also useful to compute the moments. Indeed, by differentiating w.r.t. $\beta$, we have that
+&lt;p&gt;Besides characterising the distribution, the Laplace transform is also useful to compute the moments. Indeed, by differentiating w.r.t. $\beta$ (we differentiate inside the expectation since $e^{-\beta \bar{\tau}}\leq 1$ almost surely), we have that
 $$
 -\frac{\partial}{\partial \beta} \mathbb{E}[e^{-\beta \bar{\tau}_{\alpha}}]\bigg|_{\beta=0} = \mathbb{E}[\bar{\tau}_{\alpha}] = \frac{\alpha}{\mu}\,.
 $$&lt;/p&gt;
