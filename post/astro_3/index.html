@@ -36,7 +36,7 @@
   <meta name="description" content="Some vacation fun on gambling and martingales." />
 
   
-  <link rel="alternate" hreflang="en-uk" href="https://sauxpa.github.io/post/astro_2/" />
+  <link rel="alternate" hreflang="en-uk" href="https://sauxpa.github.io/post/astro_3/" />
 
   
 
@@ -281,7 +281,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
 
-  <link rel="canonical" href="https://sauxpa.github.io/post/astro_2/" />
+  <link rel="canonical" href="https://sauxpa.github.io/post/astro_3/" />
 
   
   
@@ -297,18 +297,18 @@
   <meta property="twitter:card" content="summary_large_image" />
   
   <meta property="og:site_name" content="Patrick Saux" />
-  <meta property="og:url" content="https://sauxpa.github.io/post/astro_2/" />
-  <meta property="og:title" content="Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [2] | Patrick Saux" />
-  <meta property="og:description" content="Some vacation fun on gambling and martingales." /><meta property="og:image" content="https://sauxpa.github.io/post/astro_2/featured.jpg" />
-    <meta property="twitter:image" content="https://sauxpa.github.io/post/astro_2/featured.jpg" /><meta property="og:locale" content="en-uk" />
+  <meta property="og:url" content="https://sauxpa.github.io/post/astro_3/" />
+  <meta property="og:title" content="Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [3] | Patrick Saux" />
+  <meta property="og:description" content="Some vacation fun on gambling and martingales." /><meta property="og:image" content="https://sauxpa.github.io/post/astro_3/featured.png" />
+    <meta property="twitter:image" content="https://sauxpa.github.io/post/astro_3/featured.png" /><meta property="og:locale" content="en-uk" />
   
     
       <meta
         property="article:published_time"
-        content="2022-09-18T00:00:00&#43;00:00"
+        content="2022-11-12T00:00:00&#43;00:00"
       />
     
-    <meta property="article:modified_time" content="2022-10-04T20:10:17&#43;02:00">
+    <meta property="article:modified_time" content="2022-11-13T16:08:12&#43;01:00">
   
 
   
@@ -332,16 +332,16 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://sauxpa.github.io/post/astro_2/"
+    "@id": "https://sauxpa.github.io/post/astro_3/"
   },
-  "headline": "Gambler's ruin in Astro and the accuracy of Gaussian approximation [2]",
+  "headline": "Gambler's ruin in Astro and the accuracy of Gaussian approximation [3]",
   
   "image": [
-    "https://sauxpa.github.io/post/astro_2/featured.jpg"
+    "https://sauxpa.github.io/post/astro_3/featured.png"
   ],
   
-  "datePublished": "2022-09-18T00:00:00Z",
-  "dateModified": "2022-10-04T20:10:17+02:00",
+  "datePublished": "2022-11-12T00:00:00Z",
+  "dateModified": "2022-11-13T16:08:12+01:00",
   
   "author": {
     "@type": "Person",
@@ -372,11 +372,11 @@
 
 
 
-  <title>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [2] | Patrick Saux</title>
+  <title>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [3] | Patrick Saux</title>
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="ce8cda6425ca51bd32692b8d805cf389" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="666f0dd515de95b452cc1fb71c34e3bd" >
 
   
   
@@ -775,10 +775,12 @@
 
   
   
+    
+  
 
 
 <div class="article-container pt-3">
-  <h1>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [2]</h1>
+  <h1>Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [3]</h1>
 
   
 
@@ -808,7 +810,7 @@
           Last updated on
       
     
-    Oct 4, 2022
+    Nov 13, 2022
   </span>
   
 
@@ -883,9 +885,9 @@
 </div>
 
 
-<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 400px; max-height: 300px;">
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1200px; max-height: 545px;">
   <div style="position: relative">
-    <img src="/post/astro_2/featured.jpg" alt="" class="featured-image">
+    <img src="/post/astro_3/featured_huf3ab832a520cd33fdf9f12b27fb42cfc_1592137_1200x0_resize_lanczos_3.png" alt="" class="featured-image">
     
   </div>
 </div>
@@ -895,225 +897,59 @@
   <div class="article-container">
 
     <div class="article-style">
-      <h2 id="assessing-the-quality-of-the-gaussian-approximation">Assessing the quality of the Gaussian approximation</h2>
-<p>In the previous post, we have calculated the distribution of the flight time of the cumulative Gaussian loss process $Z_t=\mu t + \sigma W_t$, that is $\bar{\tau}_{\alpha} = \inf \left\lbrace t\in\mathbb{R}_+, Z_t \geq \alpha \right\rbrace$. In the game of Astro though, the loss distribution for scratching a card is far from Gaussian: it is discrete, asymmetrical, with pronounced skewness towards small losses. The figure below shows the difference between the true Astro distribution (in green) and its Gaussian approximation $\mathcal{N}(\mu, \sigma^2)$ (in blue), with $\mu=0.63$ and $\sigma=20.67$.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" >
-        <img alt="" srcset="
-               /post/astro_2/astro_vs_gaussian_distributions_hu72c0f51c5aa2e2c6c44f0c4e9b7d19e8_25858_7947c7dfcc6c3ac0105073d8031c3722.png 400w,
-               /post/astro_2/astro_vs_gaussian_distributions_hu72c0f51c5aa2e2c6c44f0c4e9b7d19e8_25858_a6c83265bff505e2f4d821c3c29f1986.png 760w,
-               /post/astro_2/astro_vs_gaussian_distributions_hu72c0f51c5aa2e2c6c44f0c4e9b7d19e8_25858_1200x1200_fit_lanczos_3.png 1200w"
-               src="/post/astro_2/astro_vs_gaussian_distributions_hu72c0f51c5aa2e2c6c44f0c4e9b7d19e8_25858_7947c7dfcc6c3ac0105073d8031c3722.png"
-               width="760"
-               height="339"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
-<p>It is insightful to look at the empirical estimation of $\mu$ and $\sigma$ under both the true Astro model and its Gaussian approximation. We define the standard (unbiased) sample estimators
+      <p>In the previous posts, we have calculated the distribution of the so-called &ldquo;flight time&rdquo; $\tau_{\alpha}$, interpreted as the (random) number of Astro card a player can scratch before loosing more than their initial investment $\alpha$ (typically $\alpha=2€$), both in closed-form under a continuous time Gaussian setting and empirically using random simulations of the exact Astro loss random walk. These two approaches showed that $\frac{\alpha}{\mu}$, where $\mu$ is the average loss of random walk step, was a good estimation of $\mathbb{E}\left[ \tau_{\alpha}\right]$; in the case of Astro, this estimate is $\mathbb{E}\left[ \tau_{\alpha}\right]\approx 3.17$. We now show that this estimation is actually correct. We will actually prove a more general result, namely a closed-form expression of the Laplace transform of $\tau_{\alpha}$, based on the method of martingales already used in the Gaussian approximation.</p>
+<p>We recall that $\left(\xi_t\right)<em>{t\in\mathbb{N}}$ denotes a i.i.d sequence of random Astro losses and let
+$$
+X_t = \sum</em>{s=1}^t \xi_s
+$$
+be the cumulative loss after $t\in\mathbb{N}$ steps, and that the flight time is defined by the equation
+$$
+\tau_{\alpha} = \inf\left\lbrace t\in\mathbb{N}, X_t \geq \alpha\right\rbrace.
+$$</p>
+<h2 id="what-goes-wrong-in-the-method-of-martingales-for-discrete-random-walks">What goes wrong in the method of martingales for discrete random walks?</h2>
+<p>In the continuous time Gaussian setting, we have replaced $\tau_{\alpha}$  and $\left(X_t\right)_{t\in\mathbb{N}}$ with $\bar{\tau}_{\alpha} = \left\lbrace t\in\mathbb{R}_+, Z_t \geq \alpha\right\rbrace$ and $\left(Z_t\right)_{t\in\mathbb{R}_+}$ satisfying the stochastic differential equation $dZ_t = \mu dt + \sigma dW_t$, driven by a Brownian motion $W$. For any $\lambda\in\mathbb{R}$, $M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)$ defines a martingale and a standard application of Doob&rsquo;s optional stopping theorem showed that $\mathbb{E}\left[M^\lambda_{\bar{\tau}_{\alpha}}\right]=1$. Now in general, this gives information on two random variables simultaneously: $\bar{\tau}_{\alpha}$ and $Z_{\bar{\tau}_{\alpha}}$. The whole trick is to disentangle the contribution of each of these variables and extract the Laplace transform of $\bar{\tau}_{\alpha}$, which is $\mathbb{E}\left[e^{-\beta \bar{\tau}_{\alpha}}\right]$ for $\beta&gt;0$. In the continuous time setting, the almost sure continuity of $t\mapsto Z_t$ and the definition of $\bar{\tau}_{\alpha}$ shows that $Z_{\tau_{\alpha}}=\alpha$, which is not random at all, thus revealing information directly on $\bar{\tau}_{\alpha}$.</p>
+<p>By contrast, the discrete time counterpart $X_{\tau_\alpha}$ does not satisfy a similar equality in general, but only the inequality $X_{\tau_\alpha} \geq \alpha$. Worse, the distribution of $X_{\tau_\alpha}$ can be quite hard to characterise as there are potentially many different sequences of steps $\xi_1, \dots, \xi_{\tau_\alpha}$ that result in crossing the barrier $\alpha$. In a special case of step distribution however, $X_{\tau_\alpha}$ takes a simple form, namely if the process $X$ can only increase by a fixed step size, or decrease by multiples of the same step size. More precisely, let $\Delta&gt;0$, $(p_k)_{k\in\mathbb{N}}$ such that $p_k\in[0, 1]$ for all $k\in\mathbb{N}$ and $\sum_{k\in\mathbb{N}} p_k &lt; 1$, and define the  i.i.d. step sequence $(\xi)_{t\in\mathbb{N}}$ by
+$$
+\xi_t = \begin{cases}
+-k\Delta&amp; \text{with probability $p_k$},,\<br>
+\Delta&amp; \text{with probability $1-\sum_{k\in\mathbb{N}} p_k$},.\<br>
+\end{cases}
+$$
+Indeed, this forces the process $X$ to move over the grid $\Delta \mathbb{N}$, and since $\alpha&gt;0$ and $X$ can only increase by $\Delta$, $X_{\tau_{\alpha}$ can only take a single value corresponding to $X_{\tau_{\alpha}-1}&lt;\alpha$ and $\xi_{\tau_{\alpha}}=\Delta$, i.e. $X_{\tau_{\alpha}}=\lceil \frac{\alpha}{\Delta}\rceil\Delta =: \alpha^+$, where $\lceil x \rceil$ denotes the ceil operator (smallest integer larger than $x$).</p>
+<p>As it turns out, this is exactly the format of the Astro step distribution: $\xi_t$ is equal to $2€$ minus the gain of the $t$-th ticket, and since all gains are multiple of $2€$, with a minimum of $0€$, the above property holds with $\Delta=2€$ and $(p_k)_{k\in\mathbb{N}}$ the corresponding gain probabilities.</p>
+<h2 id="exponential-supermartingale-and-expected-flight-time">Exponential supermartingale and expected flight time</h2>
+<p>Using the property that $X_{\tau_\alpha}$, the martingale method developed in the first part for the Gaussian approximation can be applied to the process $X$ essentially unchanged. Let $\xi$ denote a generic random variable following the Astro step distribution and define
+$$
+\psi\colon \lambda\in\mathbb{R}^*_+ \mapsto \log\mathbb{E}\left[ e^{\lambda \xi}\right],.
+$$
+Then, for any $\lambda&gt;0$, the process defined for $t\in\mathbb{N}$ by $M^\lambda_t = e^{X_t  - t\psi(\lambda)}$ is a martingale. Using the expression of the step size sequence, we have
 \begin{align*}
-&amp;\widehat{\mu}_t = \frac{1}{t}\sum_{s=1}^t X_s \,,\\<br>
-&amp;\widehat{\sigma}^2_t = \frac{1}{t-1}\sum_{s=1}^t \left(X_s - \widehat{\mu}_t\right)^2 \,,
+\psi(\lambda) &amp;= \log\left(\sum_{k\in\mathbb{N}} p_k e^{-k \Delta \lambda} + \left(1 - \sum_{k\in\mathbb{N}}p_k\right) e^{\lambda \Delta} \right)\<br>
+&amp;= \lambda \Delta + \log\left(1 - \sum_{k\in\mathbb{N}}p_k\left(1 - e^{-(k+1)\Delta}\right)\right),.
 \end{align*}
-and report below the median (25th - 75th percentile in shaded area) of 10 independent replications of $\widehat{\mu}_t$ and $\widehat{\sigma}_t$ for $t$ ranging from 2 to 4,500,000, where $X$ is sampled from the Astro distribution (in green) and the Gaussian approximation (in blue).</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" >
-        <img alt="" srcset="
-               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hubeb908b7006fc2257a7621c266e289b1_79434_d70fa162b0026c6d9f7e7fe36cf9d868.png 400w,
-               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hubeb908b7006fc2257a7621c266e289b1_79434_8add3d03d48a04eb9acb971018d12892.png 760w,
-               /post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hubeb908b7006fc2257a7621c266e289b1_79434_1200x1200_fit_lanczos_3.png 1200w"
-               src="/post/astro_2/mu_sigma_astro_vs_gaussian_distributions_hubeb908b7006fc2257a7621c266e289b1_79434_d70fa162b0026c6d9f7e7fe36cf9d868.png"
-               width="496"
-               height="712"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
-<p>For the mean estimation, as expected, $\widehat{\mu}_t$ converges to the true expected value $\mu=0.63$, with higher dispersion in the Gaussian case. For the variance estimation, $\widehat{\sigma}_t$ seems to converge quite fast to the true value $\sigma=20.67$ in the Gaussian case, but remains much lower in the Astro model until $t\approx 10^5$, before suddenly jumping to values around $\widehat{\sigma}_t\approx 20$. This is actually quite intuitive: the high variance of the Astro distribution is driven by the outlier gains, in particular 1,000 and 25,000, which occur with very small probability. Before $t\approx 10^5$, the samples $X_1, \dots, X_t$ used in $\widehat{\sigma}_t$ do not contain such outliers, thus estimating a seemingly low variance. In other words, the sample variance in the Astro model is subject to higher variability than in the Gaussian case, which hints at larger higher order moments (skewness, kurtosis&hellip;) in the Astro case. We confirm this intuition with a direct calculation, based on the formulae:</p>
-<p>\begin{align*}
-&amp;skewness = \frac{\mathbb{E}\left[\left(X-\mu\right)^3\right]}{\sigma^{\frac{3}{2}}}\,,\\<br>
-&amp;kurtosis = \frac{\mathbb{E}\left[\left(X-\mu\right)^4\right]}{\sigma^{2}} - 3\,.
-\end{align*}</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>$\mu$</th>
-<th>$\sigma$</th>
-<th>skewness</th>
-<th>kurtosis</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Astro</td>
-<td>0.63</td>
-<td>20.67</td>
-<td>-1180</td>
-<td>1426486</td>
-</tr>
-<tr>
-<td>Gaussian</td>
-<td>0.63</td>
-<td>20.67</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-<h2 id="simulated-flight-time">Simulated flight time</h2>
-<p>Contrary to the continuous time Gaussian case $\bar{\tau}_{\alpha}$, computing $\tau_{\alpha}=\inf\left\lbrace t\in\mathbb{N}, X_t \geq \alpha\right\rbrace$ in closed-form for the true Astro distribution is a priori intricate. However, it is straightforward to simulate random walks following the Astro distribution and therefore to estimate $\tau_{\alpha}$ by the Monte Carlo method. The result of 100 millions independent replications are reported below against the inverse Gaussian distribution coming from the Gaussian approximation model.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" >
-        <img alt="" srcset="
-               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hu7a3a15ba6dace7201dd4329569ad7e76_26354_ae283f78c9470905ef8d476be901d24c.png 400w,
-               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hu7a3a15ba6dace7201dd4329569ad7e76_26354_453a1166625d2185a56f7ab14bb84d34.png 760w,
-               /post/astro_2/astro_vs_gaussian_flight_time_distributions_hu7a3a15ba6dace7201dd4329569ad7e76_26354_1200x1200_fit_lanczos_3.png 1200w"
-               src="/post/astro_2/astro_vs_gaussian_flight_time_distributions_hu7a3a15ba6dace7201dd4329569ad7e76_26354_ae283f78c9470905ef8d476be901d24c.png"
-               width="496"
-               height="352"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
-<p>The simulation reveals that the inverse Gaussian approximation underestimates the probability of small flight times and overestimates that of longer ($&gt;100$) flight times. In other words, the inverse Gaussian approximation does not account properly for the high risk of early crash. We report mean, standard deviation and percentiles of $\tau_{\alpha}$ and $\bar{\tau}_{\alpha}$, i.e. under both the simulated Astro and the inverse Gaussian models (95% confidence intervals for the simulated statistics are calculated by bootstrap with 400 independent replications).</p>
-<table>
-<thead>
-<tr>
-<th></th>
-<th>$\mu$</th>
-<th>$\sigma$</th>
-<th>5th</th>
-<th>25th</th>
-<th>50th</th>
-<th>75th</th>
-<th>95th</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Astro (simulated) $\tau_{\alpha}$</td>
-<td>3.20 <br />[3.15 ; 3.27]</td>
-<td>60.8 <br />[39.9 ; 78.4]</td>
-<td>1.0 <br />[1.0 ; 1.0]</td>
-<td>1.0 <br />[1.0 ; 1.0]</td>
-<td>1.0 <br />[1.0 ; 1.0]</td>
-<td>2.0 <br />[2.0 ; 2.0]</td>
-<td>11.0 <br />[11.0 ; 11.0]</td>
-</tr>
-<tr>
-<td>IG approximation $\bar{\tau}_{\alpha}$</td>
-<td>3.17</td>
-<td>20.67</td>
-<td>0.00</td>
-<td>0.01</td>
-<td>0.02</td>
-<td>0.09</td>
-<td>2.14</td>
-</tr>
-</tbody>
-</table>
-<p>The expectation of $\tau_{\alpha}$ is, perhaps surprisingly, well estimated in the inverse Gaussian model; in fact, it is statistically plausible that $\mathbb{E}\left[\tau_{\alpha}\right] = \mathbb{E}\left[\bar{\tau}_{\alpha}\right]$ ($3.17 \in [3.15 ; 3.27]$). This is actually somewhat intuitive: remember the expectation of $IG\left(\frac{\alpha}{\mu}, \frac{\alpha^2}{\sigma^2}\right)$ is $\frac{\alpha}{\mu}$, which depends only on the threshold $\alpha$ and the expectation $\mu$ of the Astro random walk, <em>not</em> on higher moments which are crucially underestimated by the Gaussian approximation. On the contrary, quantiles are poorly estimated by the Gaussian model, partly because of the continuous time (quantiles in the discrete time Astro model cannot be less than 1, whereas the inverse Gaussian distribution puts a lot of mass on $[0, 1]$).</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>The inverse Gaussian approximation based on continuous time martingale arguments offers an analytical expression that tracks quite accurately the expected flight time of scratching Astro cards. In a sense, this is an empirical manifestation of the ubiquitous property that Gaussian distributions are limits of distributions with finite variance (central limit theorem, Donsker&rsquo;s theorem on random walks&hellip;). This sort of approximation is numerically consistent in expectation. but much less so for other statistics, e.g. the quantiles. Moreover, let&rsquo;s emphasise again the difference in interpretation between mean and median: the expected flight time $\mathbb{E}\left[\tau_{\alpha}\right]\approx 3.17$ is driven upwards by unlikely events of large magnitude; the most likely outcome of scratching Astro cards is to loose 2€ all at once!</p>
-<p>Finally, you may check out the code used for the simulation and figures in this <a href="https://github.com/sauxpa/astro" target="_blank" rel="noopener">repo</a>.</p>
-<h2 id="whats-next">What&rsquo;s next?</h2>
-<p>Is this the best we can do? It turns out that the Astro random walk is actually a special case where the martingale arguments developed for the inverse Gaussian approximation do hold in discrete time! We will detail this in the next post and derive in particular the exact expression of $\mathbb{E}\left[\tau_{\alpha}\right]$. Spoiler: the inverse Gaussian approximation was indeed not so bad in expectation!</p>
-<h2 id="bonus">Bonus</h2>
-<p>In this first post, we mentioned a subtlety of the sampling mechanism in Astro: bought tickets are effectively removed from the pool of available tickets, and therefore sampling from the Astro distribution should be done without replacement. Intuitively though, this should be negligible since the typical flight time is much smaller than the total amount of tickets (4,500,000). To convince ourselves, we report below figures on mean and variance estimation as well as the distribution of flight time under sampling with no replacement (nr) and visually verify that they are similar to their counterparts with replacement.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" >
-        <img alt="" srcset="
-               /post/astro_2/mu_sigma_astro_nr_vs_gaussian_distributions_hubffa187233cffa206f1dccea7fc6819d_90300_1e474d5bb1441cc5c6d71ae7c9174fcb.png 400w,
-               /post/astro_2/mu_sigma_astro_nr_vs_gaussian_distributions_hubffa187233cffa206f1dccea7fc6819d_90300_4b4f99c17fea06e30f82fd4994692b56.png 760w,
-               /post/astro_2/mu_sigma_astro_nr_vs_gaussian_distributions_hubffa187233cffa206f1dccea7fc6819d_90300_1200x1200_fit_lanczos_3.png 1200w"
-               src="/post/astro_2/mu_sigma_astro_nr_vs_gaussian_distributions_hubffa187233cffa206f1dccea7fc6819d_90300_1e474d5bb1441cc5c6d71ae7c9174fcb.png"
-               width="496"
-               height="712"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" >
-        <img alt="" srcset="
-               /post/astro_2/astro_nr_vs_gaussian_flight_time_distributions_hudfd307929da19b9b32cac73cce6199e6_29446_93cbdc9d6f75da628da6f0744fe323ff.png 400w,
-               /post/astro_2/astro_nr_vs_gaussian_flight_time_distributions_hudfd307929da19b9b32cac73cce6199e6_29446_d264fe087a62b2c835893434bd37a64c.png 760w,
-               /post/astro_2/astro_nr_vs_gaussian_flight_time_distributions_hudfd307929da19b9b32cac73cce6199e6_29446_1200x1200_fit_lanczos_3.png 1200w"
-               src="/post/astro_2/astro_nr_vs_gaussian_flight_time_distributions_hudfd307929da19b9b32cac73cce6199e6_29446_93cbdc9d6f75da628da6f0744fe323ff.png"
-               width="496"
-               height="352"
-               loading="lazy" data-zoomable /></div>
-  </div></figure>
-<p>Cheers!</p>
-<p>P.S: kudos to <a href="https://pierrebauvin.netlify.app/" target="_blank" rel="noopener">Pierre Bauvin</a> for proofreading and for asking that I write it all down in the first place!</p>
+Moreover, $e^{\psi(\lambda)} = \mathbb{E}\left[e^{\lambda \xi}\right] \geq e^{\lambda \mu}$ by convexity and Jensen&rsquo;s inequality, where
+$$
+\mu=\mathbb{E}\left[\xi\right] = \Delta \left( 1 - \sum_{k\in\mathbb{N}} (1+k)p_k\right),.
+$$
+and hence $\psi(\lambda) \geq \lambda \mu &gt;0$.</p>
+<p>The same arguments as for the Gaussian approximation (dominated convergence, Doob&rsquo;s optional stopping theorem) apply and show that $\mathbb{E}\left[ e^{-\psi(\lambda) \tau_{\alpha}}\right] = e^{-\lambda \alpha^+}$. Noting that $\psi$ is invertible and using the change of variable $\beta = \psi(\lambda)$, we deduce that
+$$
+\mathbb{E}\left[ e^{-\beta \tau_{\alpha}}\right] = e^{-\psi^{-1}(\beta) \alpha^+},,
+$$
+which is the expression of the Laplace transform of $\tau_{\alpha}$. To obtain the expected flight time $\mathbb{E}\left[ \tau_{\alpha}\right]$, we differentiate with respect to $\beta$, which gives
+$$
+-\frac{\partial}{\partial \beta} \mathbb{E}\left[e^{-\beta \tau_{\alpha}}\right] = \mathbb{E}\left[ \tau_{\alpha}\right] = (\psi^{-1})'(0)\alpha^+ e^{-\psi^{-1}(0)\alpha^+} = (\psi^{-1})'(0)\alpha^+,,
+$$
+since $\psi(0)=0$.</p>
+<p>The term $(\psi^{-1})'(0)$ can be calculated using the inverse function rule, which yields $(\psi^{-1})'(0)=\frac{1}{\psi'(0)}$. A direct calculation shows that
+$$
+\psi'(\lambda) = \Delta + \frac{-\Delta\sum_{k\in\mathbb{N}}(k+1)p_k e^{-(k+1) \Delta \lambda}}{1 - \sum_{k\in\mathbb{N}}(k+1)p_k},,
+$$
+and thus $\psi'(0) = \Delta\left(1 - \sum_{k\in\mathbb{N}}(k+1)p_k\right) = \mu$. Going back to the expected flight time, we have
+$$
+\mathbb{E}\left[ \tau_{\alpha} \right] = \frac{\alpha^+}{\mu},.
+$$
+In particular for the Astro distribution, $\alpha=\Delta=\alpha^+$; in other words, $\mathbb{E}[\tau_{\alpha}]=\mathbb{E}\left[\bar{\tau}_{\alpha}\right]$, i.e. the Gaussian approximation was actually correct in expectation!</p>
 <h2 id="license">License</h2>
 <p>Copyright 2022-present <a href="https://sauxpa.github.io/" target="_blank" rel="noopener">Patrick Saux</a>.</p>
 
@@ -1143,7 +979,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://sauxpa.github.io/post/astro_2/&amp;text=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[2]" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://sauxpa.github.io/post/astro_3/&amp;text=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[3]" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1156,7 +992,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://sauxpa.github.io/post/astro_2/&amp;t=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[2]" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://sauxpa.github.io/post/astro_3/&amp;t=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[3]" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1169,7 +1005,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
       
       
       <li>
-        <a href="mailto:?subject=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[2]&amp;body=https://sauxpa.github.io/post/astro_2/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[3]&amp;body=https://sauxpa.github.io/post/astro_3/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1182,7 +1018,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://sauxpa.github.io/post/astro_2/&amp;title=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[2]" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://sauxpa.github.io/post/astro_3/&amp;title=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[3]" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1195,7 +1031,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
       
       
       <li>
-        <a href="whatsapp://send?text=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[2]%20https://sauxpa.github.io/post/astro_2/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[3]%20https://sauxpa.github.io/post/astro_3/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1208,7 +1044,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://sauxpa.github.io/post/astro_2/&amp;title=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[2]" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://sauxpa.github.io/post/astro_3/&amp;title=Gambler&amp;#39;s%20ruin%20in%20Astro%20and%20the%20accuracy%20of%20Gaussian%20approximation%20[3]" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1254,7 +1090,7 @@ and report below the median (25th - 75th percentile in shaded area) of 10 indepe
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/astro_3/">Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [3]</a></li>
+      <li><a href="/post/astro_2/">Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [2]</a></li>
       
       <li><a href="/post/astro_1/">Gambler&#39;s ruin in Astro and the accuracy of Gaussian approximation [1]</a></li>
       
