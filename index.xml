@@ -171,9 +171,9 @@ $$
 $$
 In particular for the Astro distribution, $\alpha=\Delta=\alpha^+$; in other words, $\mathbb{E}[\tau_{\alpha}]=\mathbb{E}\left[\bar{\tau}_{\alpha}\right]$, i.e. the Gaussian approximation was actually correct in expectation!&lt;/p&gt;
 &lt;h2 id=&#34;going-further-higher-moments&#34;&gt;Going further: higher moments&lt;/h2&gt;
-&lt;p&gt;Thanks to the exact calculation of the Laplace transform of $\tau_{\alpha}$, it is possible to derive higher moments by differentiating $\mathbb{E}\left[e^{-\beta \tau_{\alpha}}\right]$ multiple times. A key observation is that the function $\psi$ fully describes the &lt;em&gt;cumulants&lt;/em&gt; $(\kappa_n)&lt;em&gt;{n\geq 1}$ of the distribution of $\xi$, which are an alternative to moments (intuitively, the $n$-th cumulant is the component of the $n$-th moment that is &amp;ldquo;independent&amp;rdquo; of the previous moments; for instance, $\kappa_2$ is the variance of $\xi$ rather than $\mathbb{E}[\xi^2]$). More formally, the cumulants are defined by the power series expansion
+&lt;p&gt;Thanks to the exact calculation of the Laplace transform of $\tau_{\alpha}$, it is possible to derive higher moments by differentiating $\mathbb{E}\left[e^{-\beta \tau_{\alpha}}\right]$ multiple times. A key observation is that the function $\psi$ fully describes the &lt;em&gt;cumulants&lt;/em&gt; $(\kappa_n)_{n\geq 1}$ of the distribution of $\xi$, which are an alternative to moments (intuitively, the $n$-th cumulant is the component of the $n$-th moment that is &amp;ldquo;independent&amp;rdquo; of the previous moments; for instance, $\kappa_2$ is the variance of $\xi$ rather than $\mathbb{E}[\xi^2]$). More formally, the cumulants are defined by the power series expansion
 $$
-\psi(\lambda) = \sum&lt;/em&gt;{n=1}^{+\infty} \kappa_n \frac{\lambda^n}{n!}\,,
+\psi(\lambda) = \sum_{n=1}^{+\infty} \kappa_n \frac{\lambda^n}{n!}\,,
 $$
 in particular $\psi^{(n)}(0)=\kappa_n$. Therefore, by successive differentiations of $\beta\mapsto e^{-\psi^{-1}(\beta)\alpha^+}$ or $\beta\mapsto -\psi^{-1}(\beta)\alpha^+$, we can obtain the successive moments or cumulants of $\tau_{\alpha}$.&lt;/p&gt;
 &lt;p&gt;For instance, applying twice the inverse function rule yields
