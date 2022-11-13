@@ -31,7 +31,7 @@ $$&lt;/p&gt;
 $$
 M^\lambda_t = \exp\left( \frac{\lambda}{\sigma} Z_t - (\frac{\lambda^2}{2} + \frac{\lambda \mu}{\sigma})t\right)
 $$
-defines a martingale and a standard application of Doob&amp;rsquo;s optional stopping theorem showed that $\mathbb{E}\left[M^\lambda_{\bar{\tau}_{\alpha}}\right]=1$. Now in general, this gives information on two random variables simultaneously: $\bar{\tau}_{\alpha}$ and $Z_{\bar{\tau}_{\alpha}}$. The whole trick is to disentangle the contribution of each of these variables and extract the Laplace transform of $\bar{\tau}_{\alpha}$, which is $\mathbb{E}\left[e^{-\beta \bar{\tau}_{\alpha}}\right]$ for $\beta&amp;gt;0$. In the continuous time setting, the almost sure continuity of $t\mapsto Z_t$ and the definition of $\bar{\tau}_{\alpha}$ shows that $Z_{\tau_{\alpha}}=\alpha$ (almost surely), which is not random at all, thus revealing information directly on $\bar{\tau}_{\alpha}$.&lt;/p&gt;
+defines a martingale and a standard application of Doob&amp;rsquo;s optional stopping theorem showed that $\mathbb{E}\left[M^\lambda_{\bar{\tau}_{\alpha}}\right]=1$. Now in general, this gives information on two random variables simultaneously: $\bar{\tau}_{\alpha}$ and $Z_{\bar{\tau}_{\alpha}}$. The whole trick is to disentangle the contribution of each of these variables and extract the Laplace transform of $\bar{\tau}_{\alpha}$, which is $\mathbb{E}\left[e^{-\beta \bar{\tau}_{\alpha}}\right]$ for $\beta&amp;gt;0$. In the continuous time setting, the almost sure continuity of $t\mapsto Z_t$ and the definition of $\bar{\tau}_{\alpha}$ shows that $Z_{\bar{\tau}_{\alpha}}=\alpha$ (almost surely), which is not random at all, thus revealing information directly on $\bar{\tau}_{\alpha}$.&lt;/p&gt;
 &lt;p&gt;By contrast, the discrete time counterpart $X_{\tau_\alpha}$ does not satisfy a similar equality in general, but only the inequality $X_{\tau_\alpha} \geq \alpha$. Worse, the distribution of $X_{\tau_\alpha}$ can be quite difficult to characterise as there are potentially many different sequences of steps $\xi_1, \dots, \xi_{\tau_\alpha}$ that result in crossing the barrier $\alpha$. In a special case of step distribution however, $X_{\tau_\alpha}$ takes a simple form, namely if the process $X$ can only increase by a fixed step size, or decrease by multiples of the same step size. More precisely, let $\Delta&amp;gt;0$, $(p_k)_{k\in\mathbb{N}}$ such that $p_k\in[0, 1]$ for all $k\in\mathbb{N}$ and $\sum_{k\in\mathbb{N}} p_k &amp;lt; 1$, and define the  i.i.d. step sequence $(\xi)_{t\in\mathbb{N}}$ by
 $$
 \xi_t = \begin{cases}
@@ -427,7 +427,12 @@ $$&lt;/p&gt;
 &lt;p&gt;The expression of the Laplace transform $\mathbb{E}[e^{-\beta \bar{\tau}_{\alpha}}]$ reveals that $\bar{\tau}_{\alpha}$ follows an Inverse Gaussian distribution $IG\left(\frac{\alpha}{\mu}, \frac{\alpha^2}{\sigma^2}\right)$, the density of which is given by:
 $$
 p_{\bar{\tau}_{\alpha}}(t) = \sqrt{\frac{\alpha^2}{2\pi \sigma^2 t^3}} \exp\left(-\frac{\left(\mu t - \alpha\right)^2}{2\sigma^2 t} \right)\,.
-$$&lt;/p&gt;
+$$
+Its mean and variance are given respectively by
+\begin{align*}
+\mathbb{E}\left[\bar{\tau}_{\alpha}\right]&amp;amp;= \frac{\alpha}{\mu}\,,\\&lt;br&gt;
+\mathbb{V}\left[\bar{\tau}_{\alpha}\right]&amp;amp;= \frac{\alpha \sigma^2}{\mu^3}\,.
+\end{align*}&lt;/p&gt;
 &lt;p&gt;We plot below this density for the Astro parameters ($\mu=0.63, \sigma=20.67, \alpha=2$), as well as the mean, the median, and the 5th, 25th, 75th and 95th percentiles. This distribution appears to be significantly right-skewed: even the 95th percentile is below the mean ($2.14$ versus $3.17$). In other words, according to the Gaussian approximation, it is really unlikely (less than 5% chance) that your flight time will be above 2 rounds, even though the mean flight time is above 3!&lt;/p&gt;
 
 
