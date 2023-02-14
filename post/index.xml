@@ -536,6 +536,19 @@ Its mean and variance are given respectively by
     </item>
     
     <item>
+      <title>Machine learning to personalise patient follow-up after obesity surgery (in French)</title>
+      <link>https://sauxpa.github.io/post/interview_b4h/</link>
+      <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>https://sauxpa.github.io/post/interview_b4h/</guid>
+      <description>&lt;p&gt;Interview (in French) on the Bandits for Health project.&lt;/p&gt;
+&lt;p&gt;Link: &lt;a href=&#34;https://www.inria.fr/fr/chirurgie-obesite-machine-learning-medecine-personnalisee&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.inria.fr/fr/chirurgie-obesite-machine-learning-medecine-personnalisee&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Weight predictor website: &lt;a href=&#34;https://bariatric-weight-trajectory-prediction.univ-lille.fr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://bariatric-weight-trajectory-prediction.univ-lille.fr/&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+&lt;p&gt;Copyright 2020-present &lt;a href=&#34;https://sauxpa.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Patrick Saux&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Markov Epidemic, a stochastic model for disease outbreak</title>
       <link>https://sauxpa.github.io/post/markov_epidemic/</link>
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
